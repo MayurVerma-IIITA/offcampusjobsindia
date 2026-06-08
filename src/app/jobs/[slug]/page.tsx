@@ -94,7 +94,7 @@ export default async function JobDetailPage({
           <Link href={`/jobs?experience=${job.experienceLevel.toLowerCase()}`}>
             <Badge className="hover:bg-primary/80">{job.experienceLevel}</Badge>
           </Link>
-          {isExpired ? <Badge variant="destructive">Applications Closed</Badge> : null}
+          {isExpired ? <Badge className="border-transparent bg-destructive text-destructive-foreground hover:bg-destructive/80">Applications Closed</Badge> : null}
         </div>
 
         {imageUrls && (

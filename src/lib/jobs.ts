@@ -77,6 +77,7 @@ function mapPrismaJob(job: PrismaJob): Job {
     salary: job.salary,
     deadline: job.deadline?.toISOString() || null,
     applyUrl: job.applyUrl,
+    featuredImage: job.featuredImage,
     status: isExpired ? "EXPIRED" : job.status,
     publishedAt: job.publishedAt?.toISOString() || null,
     seoTitle: job.seoTitle,

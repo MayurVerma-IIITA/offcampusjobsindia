@@ -18,6 +18,7 @@ export type Job = {
   salary?: string | null;
   deadline?: string | null;
   applyUrl: string;
+  featuredImage?: string | null;
   status: "DRAFT" | "PUBLISHED" | "EXPIRED" | "ARCHIVED";
   publishedAt?: string | null;
   seoTitle: string;
