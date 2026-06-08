@@ -1,0 +1,1411 @@
+0 verbose cli C:\Program Files\nodejs\node.exe C:\Program Files\nodejs\node_modules\npm\bin\npm-cli.js
+1 info using npm@11.6.1
+2 info using node@v24.11.0
+3 silly config load:file:C:\Program Files\nodejs\node_modules\npm\npmrc
+4 silly config load:file:D:\new_downloads\websiteshubham\.npmrc
+5 silly config load:file:C:\Users\HP\.npmrc
+6 silly config load:file:C:\Users\HP\AppData\Roaming\npm\etc\npmrc
+7 verbose title npm install @prisma/client@6 prisma@6
+8 verbose argv "install" "@prisma/client@6" "prisma@6"
+9 verbose logfile logs-max:10 dir:D:\new_downloads\websiteshubham\.npm-cache\_logs\2026-06-08T13_59_23_750Z-
+10 verbose logfile D:\new_downloads\websiteshubham\.npm-cache\_logs\2026-06-08T13_59_23_750Z-debug-0.log
+11 silly logfile done cleaning log files
+12 silly packumentCache heap:4496293888 maxSize:1124073472 maxEntrySize:562036736
+13 silly idealTree buildDeps
+14 silly fetch manifest @prisma/client@6
+15 silly packumentCache full:https://registry.npmjs.org/@prisma%2fclient cache-miss
+16 verbose shrinkwrap failed to load node_modules/.package-lock.json out of date, updated: node_modules
+17 http fetch GET 200 https://registry.npmjs.org/@prisma%2fclient 453ms (cache revalidated)
+18 silly packumentCache full:https://registry.npmjs.org/@prisma%2fclient set size:67850434 disposed:false
+19 silly fetch manifest prisma@6
+20 silly packumentCache full:https://registry.npmjs.org/prisma cache-miss
+21 http fetch GET 200 https://registry.npmjs.org/prisma 142ms (cache revalidated)
+22 silly packumentCache full:https://registry.npmjs.org/prisma set size:43259646 disposed:false
+23 silly fetch manifest typescript@^5
+24 silly packumentCache full:https://registry.npmjs.org/typescript cache-miss
+25 http fetch GET 200 https://registry.npmjs.org/typescript 94ms (cache revalidated)
+26 silly packumentCache full:https://registry.npmjs.org/typescript set size:15409943 disposed:false
+27 silly placeDep ROOT @prisma/client@6.19.3 REPLACE for: off-campus-jobs-india@0.1.0 want: 6
+28 silly placeDep ROOT prisma@6.19.3 REPLACE for: off-campus-jobs-india@0.1.0 want: 6
+29 silly fetch manifest @prisma/config@6.19.3
+30 silly packumentCache full:https://registry.npmjs.org/@prisma%2fconfig cache-miss
+31 silly fetch manifest @prisma/engines@6.19.3
+32 silly packumentCache full:https://registry.npmjs.org/@prisma%2fengines cache-miss
+33 http fetch GET 200 https://registry.npmjs.org/@prisma%2fengines 325ms (cache revalidated)
+34 silly packumentCache full:https://registry.npmjs.org/@prisma%2fengines set size:21771771 disposed:false
+35 http fetch GET 200 https://registry.npmjs.org/@prisma%2fconfig 472ms (cache revalidated)
+36 silly packumentCache full:https://registry.npmjs.org/@prisma%2fconfig set size:3788439 disposed:false
+37 silly fetch manifest @emnapi/runtime@^1.7.0
+38 silly packumentCache full:https://registry.npmjs.org/@emnapi%2fruntime cache-miss
+39 http fetch GET 200 https://registry.npmjs.org/@emnapi%2fruntime 70ms (cache revalidated)
+40 silly packumentCache full:https://registry.npmjs.org/@emnapi%2fruntime set size:114084 disposed:false
+41 silly placeDep ROOT @emnapi/runtime@1.11.0 OK for: @img/sharp-wasm32@0.34.5 want: ^1.7.0
+42 silly fetch manifest @emnapi/core@^1.7.1
+43 silly packumentCache full:https://registry.npmjs.org/@emnapi%2fcore cache-miss
+44 http fetch GET 200 https://registry.npmjs.org/@emnapi%2fcore 73ms (cache revalidated)
+45 silly packumentCache full:https://registry.npmjs.org/@emnapi%2fcore set size:112479 disposed:false
+46 silly placeDep ROOT @emnapi/core@1.11.0 OK for: @napi-rs/wasm-runtime@1.1.4 want: ^1.7.1
+47 silly placeDep ROOT @prisma/config@6.19.3 OK for: prisma@6.19.3 want: 6.19.3
+48 silly placeDep ROOT @prisma/engines@6.19.3 OK for: prisma@6.19.3 want: 6.19.3
+49 silly fetch manifest c12@3.1.0
+50 silly packumentCache full:https://registry.npmjs.org/c12 cache-miss
+51 silly fetch manifest effect@3.21.0
+52 silly packumentCache full:https://registry.npmjs.org/effect cache-miss
+53 silly fetch manifest empathic@2.0.0
+54 silly packumentCache full:https://registry.npmjs.org/empathic cache-miss
+55 silly fetch manifest deepmerge-ts@7.1.5
+56 silly packumentCache full:https://registry.npmjs.org/deepmerge-ts cache-miss
+57 silly fetch manifest @prisma/debug@6.19.3
+58 silly packumentCache full:https://registry.npmjs.org/@prisma%2fdebug cache-miss
+59 silly fetch manifest @prisma/fetch-engine@6.19.3
+60 silly packumentCache full:https://registry.npmjs.org/@prisma%2ffetch-engine cache-miss
+61 silly fetch manifest @prisma/get-platform@6.19.3
+62 silly packumentCache full:https://registry.npmjs.org/@prisma%2fget-platform cache-miss
+63 silly fetch manifest @prisma/engines-version@7.1.1-3.c2990dca591cba766e3b7ef5d9e8a84796e47ab7
+64 silly packumentCache full:https://registry.npmjs.org/@prisma%2fengines-version cache-miss
+65 http fetch GET 200 https://registry.npmjs.org/effect 83ms (cache revalidated)
+66 silly packumentCache full:https://registry.npmjs.org/effect set size:10072091 disposed:false
+67 http fetch GET 200 https://registry.npmjs.org/empathic 229ms (cache revalidated)
+68 silly packumentCache full:https://registry.npmjs.org/empathic set size:20342 disposed:false
+69 http fetch GET 200 https://registry.npmjs.org/@prisma%2fdebug 355ms (cache revalidated)
+70 silly packumentCache full:https://registry.npmjs.org/@prisma%2fdebug set size:28719955 disposed:false
+71 http fetch GET 200 https://registry.npmjs.org/c12 597ms (cache revalidated)
+72 silly packumentCache full:https://registry.npmjs.org/c12 set size:188644 disposed:false
+73 http fetch GET 200 https://registry.npmjs.org/deepmerge-ts 600ms (cache revalidated)
+74 silly packumentCache full:https://registry.npmjs.org/deepmerge-ts set size:334522 disposed:false
+75 http fetch GET 200 https://registry.npmjs.org/@prisma%2ffetch-engine 739ms (cache revalidated)
+76 silly packumentCache full:https://registry.npmjs.org/@prisma%2ffetch-engine set size:32299284 disposed:false
+77 http fetch GET 200 https://registry.npmjs.org/@prisma%2fengines-version 917ms (cache revalidated)
+78 silly packumentCache full:https://registry.npmjs.org/@prisma%2fengines-version set size:9921553 disposed:false
+79 http fetch GET 200 https://registry.npmjs.org/@prisma%2fget-platform 1234ms (cache revalidated)
+80 silly packumentCache full:https://registry.npmjs.org/@prisma%2fget-platform set size:28404940 disposed:false
+81 silly fetch manifest magicast@^0.3.5
+82 silly packumentCache full:https://registry.npmjs.org/magicast cache-miss
+83 http fetch GET 200 https://registry.npmjs.org/magicast 60ms (cache revalidated)
+84 silly packumentCache full:https://registry.npmjs.org/magicast set size:84158 disposed:false
+85 silly placeDep ROOT c12@3.1.0 OK for: @prisma/config@6.19.3 want: 3.1.0
+86 silly placeDep ROOT deepmerge-ts@7.1.5 OK for: @prisma/config@6.19.3 want: 7.1.5
+87 silly placeDep ROOT effect@3.21.0 OK for: @prisma/config@6.19.3 want: 3.21.0
+88 silly placeDep ROOT empathic@2.0.0 OK for: @prisma/config@6.19.3 want: 2.0.0
+89 silly fetch manifest rc9@^2.1.2
+90 silly packumentCache full:https://registry.npmjs.org/rc9 cache-miss
+91 silly fetch manifest defu@^6.1.4
+92 silly packumentCache full:https://registry.npmjs.org/defu cache-miss
+93 silly fetch manifest giget@^2.0.0
+94 silly packumentCache full:https://registry.npmjs.org/giget cache-miss
+95 silly fetch manifest ohash@^2.0.11
+96 silly packumentCache full:https://registry.npmjs.org/ohash cache-miss
+97 silly fetch manifest pathe@^2.0.3
+98 silly packumentCache full:https://registry.npmjs.org/pathe cache-miss
+99 silly fetch manifest dotenv@^16.6.1
+100 silly packumentCache full:https://registry.npmjs.org/dotenv cache-miss
+101 silly fetch manifest confbox@^0.2.2
+102 silly packumentCache full:https://registry.npmjs.org/confbox cache-miss
+103 silly fetch manifest exsolve@^1.0.7
+104 silly packumentCache full:https://registry.npmjs.org/exsolve cache-miss
+105 silly fetch manifest chokidar@^4.0.3
+106 silly packumentCache full:https://registry.npmjs.org/chokidar cache-miss
+107 silly fetch manifest pkg-types@^2.2.0
+108 silly packumentCache full:https://registry.npmjs.org/pkg-types cache-miss
+109 silly fetch manifest perfect-debounce@^1.0.0
+110 silly packumentCache full:https://registry.npmjs.org/perfect-debounce cache-miss
+111 http fetch GET 200 https://registry.npmjs.org/defu 73ms (cache revalidated)
+112 silly packumentCache full:https://registry.npmjs.org/defu set size:87806 disposed:false
+113 silly fetch manifest fast-check@^3.23.1
+114 silly packumentCache full:https://registry.npmjs.org/fast-check cache-miss
+115 http fetch GET 200 https://registry.npmjs.org/pathe 77ms (cache revalidated)
+116 silly packumentCache full:https://registry.npmjs.org/pathe set size:68788 disposed:false
+117 silly fetch manifest @standard-schema/spec@^1.0.0
+118 silly packumentCache full:https://registry.npmjs.org/@standard-schema%2fspec cache-miss
+119 http fetch GET 200 https://registry.npmjs.org/rc9 82ms (cache revalidated)
+120 silly packumentCache full:https://registry.npmjs.org/rc9 set size:62610 disposed:false
+121 http fetch GET 200 https://registry.npmjs.org/confbox 83ms (cache revalidated)
+122 silly packumentCache full:https://registry.npmjs.org/confbox set size:44789 disposed:false
+123 http fetch GET 200 https://registry.npmjs.org/dotenv 88ms (cache revalidated)
+124 silly packumentCache full:https://registry.npmjs.org/dotenv set size:277832 disposed:false
+125 http fetch GET 200 https://registry.npmjs.org/giget 106ms (cache revalidated)
+126 silly packumentCache full:https://registry.npmjs.org/giget set size:97515 disposed:false
+127 http fetch GET 200 https://registry.npmjs.org/@standard-schema%2fspec 88ms (cache revalidated)
+128 silly packumentCache full:https://registry.npmjs.org/@standard-schema%2fspec set size:27284 disposed:false
+129 http fetch GET 200 https://registry.npmjs.org/chokidar 174ms (cache revalidated)
+130 silly packumentCache full:https://registry.npmjs.org/chokidar set size:255902 disposed:false
+131 http fetch GET 200 https://registry.npmjs.org/perfect-debounce 185ms (cache revalidated)
+132 silly packumentCache full:https://registry.npmjs.org/perfect-debounce set size:28201 disposed:false
+133 http fetch GET 200 https://registry.npmjs.org/ohash 290ms (cache revalidated)
+134 silly packumentCache full:https://registry.npmjs.org/ohash set size:69122 disposed:false
+135 http fetch GET 200 https://registry.npmjs.org/exsolve 297ms (cache revalidated)
+136 silly packumentCache full:https://registry.npmjs.org/exsolve set size:56620 disposed:false
+137 http fetch GET 200 https://registry.npmjs.org/fast-check 301ms (cache revalidated)
+138 silly packumentCache full:https://registry.npmjs.org/fast-check set size:941967 disposed:false
+139 http fetch GET 200 https://registry.npmjs.org/pkg-types 393ms (cache revalidated)
+140 silly packumentCache full:https://registry.npmjs.org/pkg-types set size:90685 disposed:false
+141 silly placeDep ROOT @prisma/debug@6.19.3 OK for: @prisma/engines@6.19.3 want: 6.19.3
+142 silly placeDep ROOT @prisma/engines-version@7.1.1-3.c2990dca591cba766e3b7ef5d9e8a84796e47ab7 OK for: @prisma/engines@6.19.3 want: 7.1.1-3.c2990dca591cba766e3b7ef5d9e8a84796e47ab7
+143 silly placeDep ROOT @prisma/fetch-engine@6.19.3 OK for: @prisma/engines@6.19.3 want: 6.19.3
+144 silly placeDep ROOT @prisma/get-platform@6.19.3 OK for: @prisma/engines@6.19.3 want: 6.19.3
+145 silly placeDep ROOT chokidar@4.0.3 OK for: c12@3.1.0 want: ^4.0.3
+146 silly placeDep ROOT confbox@0.2.4 OK for: c12@3.1.0 want: ^0.2.2
+147 silly placeDep ROOT defu@6.1.7 OK for: c12@3.1.0 want: ^6.1.4
+148 silly placeDep ROOT dotenv@16.6.1 OK for: c12@3.1.0 want: ^16.6.1
+149 silly placeDep ROOT exsolve@1.0.8 OK for: c12@3.1.0 want: ^1.0.7
+150 silly placeDep ROOT giget@2.0.0 OK for: c12@3.1.0 want: ^2.0.0
+151 silly placeDep ROOT ohash@2.0.11 OK for: c12@3.1.0 want: ^2.0.11
+152 silly placeDep ROOT pathe@2.0.3 OK for: c12@3.1.0 want: ^2.0.3
+153 silly placeDep ROOT perfect-debounce@1.0.0 OK for: c12@3.1.0 want: ^1.0.0
+154 silly placeDep ROOT pkg-types@2.3.1 OK for: c12@3.1.0 want: ^2.2.0
+155 silly placeDep ROOT rc9@2.1.2 OK for: c12@3.1.0 want: ^2.1.2
+156 silly fetch manifest readdirp@^4.0.1
+157 silly packumentCache full:https://registry.npmjs.org/readdirp cache-miss
+158 silly fetch manifest nypm@^0.6.0
+159 silly packumentCache full:https://registry.npmjs.org/nypm cache-miss
+160 silly fetch manifest citty@^0.1.6
+161 silly packumentCache full:https://registry.npmjs.org/citty cache-miss
+162 silly fetch manifest consola@^3.4.0
+163 silly packumentCache full:https://registry.npmjs.org/consola cache-miss
+164 silly fetch manifest node-fetch-native@^1.6.6
+165 silly packumentCache full:https://registry.npmjs.org/node-fetch-native cache-miss
+166 silly fetch manifest destr@^2.0.3
+167 silly packumentCache full:https://registry.npmjs.org/destr cache-miss
+168 http fetch GET 200 https://registry.npmjs.org/consola 101ms (cache miss)
+169 silly packumentCache full:https://registry.npmjs.org/consola set size:undefined disposed:false
+170 http fetch GET 200 https://registry.npmjs.org/destr 133ms (cache revalidated)
+171 silly packumentCache full:https://registry.npmjs.org/destr set size:65344 disposed:false
+172 http fetch GET 200 https://registry.npmjs.org/readdirp 136ms (cache revalidated)
+173 silly packumentCache full:https://registry.npmjs.org/readdirp set size:107589 disposed:false
+174 http fetch GET 200 https://registry.npmjs.org/node-fetch-native 277ms (cache miss)
+175 silly packumentCache full:https://registry.npmjs.org/node-fetch-native set size:undefined disposed:false
+176 http fetch GET 200 https://registry.npmjs.org/citty 279ms (cache miss)
+177 silly packumentCache full:https://registry.npmjs.org/citty set size:undefined disposed:false
+178 http fetch GET 200 https://registry.npmjs.org/nypm 291ms (cache miss)
+179 silly packumentCache full:https://registry.npmjs.org/nypm set size:undefined disposed:false
+180 silly placeDep ROOT readdirp@4.1.2 OK for: chokidar@4.0.3 want: ^4.0.1
+181 silly placeDep ROOT @standard-schema/spec@1.1.0 OK for: effect@3.21.0 want: ^1.0.0
+182 silly placeDep ROOT fast-check@3.23.2 OK for: effect@3.21.0 want: ^3.23.1
+183 silly fetch manifest pure-rand@^6.1.0
+184 silly packumentCache full:https://registry.npmjs.org/pure-rand cache-miss
+185 http fetch GET 200 https://registry.npmjs.org/pure-rand 77ms (cache revalidated)
+186 silly packumentCache full:https://registry.npmjs.org/pure-rand set size:185950 disposed:false
+187 silly placeDep ROOT pure-rand@6.1.0 OK for: fast-check@3.23.2 want: ^6.1.0
+188 silly placeDep ROOT citty@0.1.6 OK for: giget@2.0.0 want: ^0.1.6
+189 silly placeDep ROOT consola@3.4.2 OK for: giget@2.0.0 want: ^3.4.0
+190 silly placeDep ROOT node-fetch-native@1.6.7 OK for: giget@2.0.0 want: ^1.6.6
+191 silly placeDep ROOT nypm@0.6.6 OK for: giget@2.0.0 want: ^0.6.0
+192 silly fetch manifest consola@^3.2.3
+193 silly packumentCache full:https://registry.npmjs.org/consola cache-miss
+194 silly fetch manifest citty@^0.2.2
+195 silly packumentCache full:https://registry.npmjs.org/citty cache-miss
+196 silly fetch manifest tinyexec@^1.1.1
+197 silly packumentCache full:https://registry.npmjs.org/tinyexec cache-miss
+198 http cache https://registry.npmjs.org/citty 8ms (cache hit)
+199 silly packumentCache full:https://registry.npmjs.org/citty set size:38582 disposed:false
+200 http cache https://registry.npmjs.org/consola 10ms (cache hit)
+201 silly packumentCache full:https://registry.npmjs.org/consola set size:324648 disposed:false
+202 http fetch GET 200 https://registry.npmjs.org/tinyexec 53ms (cache miss)
+203 silly packumentCache full:https://registry.npmjs.org/tinyexec set size:undefined disposed:false
+204 silly placeDep node_modules/nypm citty@0.2.2 OK for: nypm@0.6.6 want: ^0.2.2
+205 silly placeDep ROOT tinyexec@1.2.4 OK for: nypm@0.6.6 want: ^1.1.1
+206 silly placeDep ROOT destr@2.0.5 OK for: rc9@2.1.2 want: ^2.0.3
+207 silly reify mark retired [ 'D:\\new_downloads\\websiteshubham\\node_modules\\aws-ssl-profiles' ]
+208 silly reify mark retired [ 'D:\\new_downloads\\websiteshubham\\node_modules\\c12' ]
+209 silly reify mark retired [ 'D:\\new_downloads\\websiteshubham\\node_modules\\better-result' ]
+210 silly reify mark retired [ 'D:\\new_downloads\\websiteshubham\\node_modules\\chart.js' ]
+211 silly reify mark retired [ 'D:\\new_downloads\\websiteshubham\\node_modules\\chokidar' ]
+212 silly reify mark retired [ 'D:\\new_downloads\\websiteshubham\\node_modules\\denque' ]
+213 silly reify mark retired [ 'D:\\new_downloads\\websiteshubham\\node_modules\\dotenv' ]
+214 silly reify mark retired [ 'D:\\new_downloads\\websiteshubham\\node_modules\\effect' ]
+215 silly reify mark retired [ 'D:\\new_downloads\\websiteshubham\\node_modules\\env-paths' ]
+216 silly reify mark retired [ 'D:\\new_downloads\\websiteshubham\\node_modules\\fast-uri' ]
+217 silly reify mark retired [ 'D:\\new_downloads\\websiteshubham\\node_modules\\foreground-child' ]
+218 silly reify mark retired [
+218 silly reify   'D:\\new_downloads\\websiteshubham\\node_modules\\generate-function'
+218 silly reify ]
+219 silly reify mark retired [ 'D:\\new_downloads\\websiteshubham\\node_modules\\get-port-please' ]
+220 silly reify mark retired [
+220 silly reify   'D:\\new_downloads\\websiteshubham\\node_modules\\giget',
+220 silly reify   'D:\\new_downloads\\websiteshubham\\node_modules\\.bin\\giget',
+220 silly reify   'D:\\new_downloads\\websiteshubham\\node_modules\\.bin\\giget.cmd',
+220 silly reify   'D:\\new_downloads\\websiteshubham\\node_modules\\.bin\\giget.ps1'
+220 silly reify ]
+221 silly reify mark retired [ 'D:\\new_downloads\\websiteshubham\\node_modules\\graphmatch' ]
+222 silly reify mark retired [ 'D:\\new_downloads\\websiteshubham\\node_modules\\grammex' ]
+223 silly reify mark retired [
+223 silly reify   'D:\\new_downloads\\websiteshubham\\node_modules\\http-status-codes'
+223 silly reify ]
+224 silly reify mark retired [ 'D:\\new_downloads\\websiteshubham\\node_modules\\iconv-lite' ]
+225 silly reify mark retired [ 'D:\\new_downloads\\websiteshubham\\node_modules\\hono' ]
+226 silly reify mark retired [ 'D:\\new_downloads\\websiteshubham\\node_modules\\is-property' ]
+227 silly reify mark retired [ 'D:\\new_downloads\\websiteshubham\\node_modules\\lru.min' ]
+228 silly reify mark retired [ 'D:\\new_downloads\\websiteshubham\\node_modules\\long' ]
+229 silly reify mark retired [ 'D:\\new_downloads\\websiteshubham\\node_modules\\mysql2' ]
+230 silly reify mark retired [
+230 silly reify   'D:\\new_downloads\\websiteshubham\\node_modules\\named-placeholders'
+230 silly reify ]
+231 silly reify mark retired [ 'D:\\new_downloads\\websiteshubham\\node_modules\\perfect-debounce' ]
+232 silly reify mark retired [ 'D:\\new_downloads\\websiteshubham\\node_modules\\postgres' ]
+233 silly reify mark retired [ 'D:\\new_downloads\\websiteshubham\\node_modules\\proper-lockfile' ]
+234 silly reify mark retired [
+234 silly reify   'D:\\new_downloads\\websiteshubham\\node_modules\\prisma',
+234 silly reify   'D:\\new_downloads\\websiteshubham\\node_modules\\.bin\\prisma',
+234 silly reify   'D:\\new_downloads\\websiteshubham\\node_modules\\.bin\\prisma.cmd',
+234 silly reify   'D:\\new_downloads\\websiteshubham\\node_modules\\.bin\\prisma.ps1'
+234 silly reify ]
+235 silly reify mark retired [ 'D:\\new_downloads\\websiteshubham\\node_modules\\rc9' ]
+236 silly reify mark retired [
+236 silly reify   'D:\\new_downloads\\websiteshubham\\node_modules\\require-from-string'
+236 silly reify ]
+237 silly reify mark retired [ 'D:\\new_downloads\\websiteshubham\\node_modules\\readdirp' ]
+238 silly reify mark retired [ 'D:\\new_downloads\\websiteshubham\\node_modules\\retry' ]
+239 silly reify mark retired [ 'D:\\new_downloads\\websiteshubham\\node_modules\\remeda' ]
+240 silly reify mark retired [ 'D:\\new_downloads\\websiteshubham\\node_modules\\safer-buffer' ]
+241 silly reify mark retired [ 'D:\\new_downloads\\websiteshubham\\node_modules\\seq-queue' ]
+242 silly reify mark retired [ 'D:\\new_downloads\\websiteshubham\\node_modules\\std-env' ]
+243 silly reify mark retired [ 'D:\\new_downloads\\websiteshubham\\node_modules\\signal-exit' ]
+244 silly reify mark retired [ 'D:\\new_downloads\\websiteshubham\\node_modules\\sqlstring' ]
+245 silly reify mark retired [ 'D:\\new_downloads\\websiteshubham\\node_modules\\valibot' ]
+246 silly reify mark retired [ 'D:\\new_downloads\\websiteshubham\\node_modules\\zeptomatch' ]
+247 silly reify mark retired [
+247 silly reify   'D:\\new_downloads\\websiteshubham\\node_modules\\@electric-sql\\pglite'
+247 silly reify ]
+248 silly reify mark retired [
+248 silly reify   'D:\\new_downloads\\websiteshubham\\node_modules\\@electric-sql\\pglite-socket',
+248 silly reify   'D:\\new_downloads\\websiteshubham\\node_modules\\.bin\\pglite-server',
+248 silly reify   'D:\\new_downloads\\websiteshubham\\node_modules\\.bin\\pglite-server.cmd',
+248 silly reify   'D:\\new_downloads\\websiteshubham\\node_modules\\.bin\\pglite-server.ps1'
+248 silly reify ]
+249 silly reify mark retired [
+249 silly reify   'D:\\new_downloads\\websiteshubham\\node_modules\\@electric-sql\\pglite-tools'
+249 silly reify ]
+250 silly reify mark retired [
+250 silly reify   'D:\\new_downloads\\websiteshubham\\node_modules\\@hono\\node-server'
+250 silly reify ]
+251 silly reify mark retired [ 'D:\\new_downloads\\websiteshubham\\node_modules\\@kurkle\\color' ]
+252 silly reify mark retired [ 'D:\\new_downloads\\websiteshubham\\node_modules\\@prisma\\debug' ]
+253 silly reify mark retired [ 'D:\\new_downloads\\websiteshubham\\node_modules\\@prisma\\config' ]
+254 silly reify mark retired [
+254 silly reify   'D:\\new_downloads\\websiteshubham\\node_modules\\@prisma\\engines-version'
+254 silly reify ]
+255 silly reify mark retired [ 'D:\\new_downloads\\websiteshubham\\node_modules\\@prisma\\engines' ]
+256 silly reify mark retired [
+256 silly reify   'D:\\new_downloads\\websiteshubham\\node_modules\\@prisma\\fetch-engine'
+256 silly reify ]
+257 silly reify mark retired [ 'D:\\new_downloads\\websiteshubham\\node_modules\\@prisma\\client' ]
+258 silly reify mark retired [ 'D:\\new_downloads\\websiteshubham\\node_modules\\@prisma\\dev' ]
+259 silly reify mark retired [
+259 silly reify   'D:\\new_downloads\\websiteshubham\\node_modules\\@prisma\\streams-local'
+259 silly reify ]
+260 silly reify mark retired [
+260 silly reify   'D:\\new_downloads\\websiteshubham\\node_modules\\@prisma\\client-runtime-utils'
+260 silly reify ]
+261 silly reify mark retired [
+261 silly reify   'D:\\new_downloads\\websiteshubham\\node_modules\\@prisma\\studio-core'
+261 silly reify ]
+262 silly reify mark retired [
+262 silly reify   'D:\\new_downloads\\websiteshubham\\node_modules\\@prisma\\get-platform'
+262 silly reify ]
+263 silly reify mark retired [
+263 silly reify   'D:\\new_downloads\\websiteshubham\\node_modules\\@prisma\\query-plan-executor'
+263 silly reify ]
+264 silly reify mark retired [
+264 silly reify   'D:\\new_downloads\\websiteshubham\\node_modules\\@radix-ui\\react-use-controllable-state'
+264 silly reify ]
+265 silly reify mark retired [
+265 silly reify   'D:\\new_downloads\\websiteshubham\\node_modules\\@radix-ui\\react-compose-refs'
+265 silly reify ]
+266 silly reify mark retired [
+266 silly reify   'D:\\new_downloads\\websiteshubham\\node_modules\\@radix-ui\\react-toggle'
+266 silly reify ]
+267 silly reify mark retired [
+267 silly reify   'D:\\new_downloads\\websiteshubham\\node_modules\\@radix-ui\\react-primitive'
+267 silly reify ]
+268 silly reify mark retired [
+268 silly reify   'D:\\new_downloads\\websiteshubham\\node_modules\\@radix-ui\\react-slot'
+268 silly reify ]
+269 silly reify mark retired [
+269 silly reify   'D:\\new_downloads\\websiteshubham\\node_modules\\@radix-ui\\primitive'
+269 silly reify ]
+270 silly reify mark retired [
+270 silly reify   'D:\\new_downloads\\websiteshubham\\node_modules\\@radix-ui\\react-use-effect-event'
+270 silly reify ]
+271 silly reify mark retired [
+271 silly reify   'D:\\new_downloads\\websiteshubham\\node_modules\\@radix-ui\\react-use-layout-effect'
+271 silly reify ]
+272 silly reify moves {
+272 silly reify   'D:\\new_downloads\\websiteshubham\\node_modules\\aws-ssl-profiles': 'D:\\new_downloads\\websiteshubham\\node_modules\\.aws-ssl-profiles-L8IXrmUE',
+272 silly reify   'D:\\new_downloads\\websiteshubham\\node_modules\\c12': 'D:\\new_downloads\\websiteshubham\\node_modules\\.c12-t4dRiVIr',
+272 silly reify   'D:\\new_downloads\\websiteshubham\\node_modules\\better-result': 'D:\\new_downloads\\websiteshubham\\node_modules\\.better-result-ag5J5HFb',
+272 silly reify   'D:\\new_downloads\\websiteshubham\\node_modules\\chart.js': 'D:\\new_downloads\\websiteshubham\\node_modules\\.chart.js-wF9E1TAj',
+272 silly reify   'D:\\new_downloads\\websiteshubham\\node_modules\\chokidar': 'D:\\new_downloads\\websiteshubham\\node_modules\\.chokidar-QidOuNCE',
+272 silly reify   'D:\\new_downloads\\websiteshubham\\node_modules\\denque': 'D:\\new_downloads\\websiteshubham\\node_modules\\.denque-heoc5atN',
+272 silly reify   'D:\\new_downloads\\websiteshubham\\node_modules\\dotenv': 'D:\\new_downloads\\websiteshubham\\node_modules\\.dotenv-eewaM0wx',
+272 silly reify   'D:\\new_downloads\\websiteshubham\\node_modules\\effect': 'D:\\new_downloads\\websiteshubham\\node_modules\\.effect-Uu546znp',
+272 silly reify   'D:\\new_downloads\\websiteshubham\\node_modules\\env-paths': 'D:\\new_downloads\\websiteshubham\\node_modules\\.env-paths-KfA4oL0y',
+272 silly reify   'D:\\new_downloads\\websiteshubham\\node_modules\\fast-uri': 'D:\\new_downloads\\websiteshubham\\node_modules\\.fast-uri-h8krlCq9',
+272 silly reify   'D:\\new_downloads\\websiteshubham\\node_modules\\foreground-child': 'D:\\new_downloads\\websiteshubham\\node_modules\\.foreground-child-qhmhj9si',
+272 silly reify   'D:\\new_downloads\\websiteshubham\\node_modules\\generate-function': 'D:\\new_downloads\\websiteshubham\\node_modules\\.generate-function-BxsSrCRB',
+272 silly reify   'D:\\new_downloads\\websiteshubham\\node_modules\\get-port-please': 'D:\\new_downloads\\websiteshubham\\node_modules\\.get-port-please-nIGjRlka',
+272 silly reify   'D:\\new_downloads\\websiteshubham\\node_modules\\giget': 'D:\\new_downloads\\websiteshubham\\node_modules\\.giget-S6xe9szq',
+272 silly reify   'D:\\new_downloads\\websiteshubham\\node_modules\\.bin\\giget': 'D:\\new_downloads\\websiteshubham\\node_modules\\.bin\\.giget-VemqF18y',
+272 silly reify   'D:\\new_downloads\\websiteshubham\\node_modules\\.bin\\giget.cmd': 'D:\\new_downloads\\websiteshubham\\node_modules\\.bin\\.giget.cmd-7eaTtlyZ',
+272 silly reify   'D:\\new_downloads\\websiteshubham\\node_modules\\.bin\\giget.ps1': 'D:\\new_downloads\\websiteshubham\\node_modules\\.bin\\.giget.ps1-jXN2dClP',
+272 silly reify   'D:\\new_downloads\\websiteshubham\\node_modules\\graphmatch': 'D:\\new_downloads\\websiteshubham\\node_modules\\.graphmatch-JBlHEQmN',
+272 silly reify   'D:\\new_downloads\\websiteshubham\\node_modules\\grammex': 'D:\\new_downloads\\websiteshubham\\node_modules\\.grammex-9YWQ1dHu',
+272 silly reify   'D:\\new_downloads\\websiteshubham\\node_modules\\http-status-codes': 'D:\\new_downloads\\websiteshubham\\node_modules\\.http-status-codes-mdkS2zpj',
+272 silly reify   'D:\\new_downloads\\websiteshubham\\node_modules\\iconv-lite': 'D:\\new_downloads\\websiteshubham\\node_modules\\.iconv-lite-KD5OvzWu',
+272 silly reify   'D:\\new_downloads\\websiteshubham\\node_modules\\hono': 'D:\\new_downloads\\websiteshubham\\node_modules\\.hono-cray4dcg',
+272 silly reify   'D:\\new_downloads\\websiteshubham\\node_modules\\is-property': 'D:\\new_downloads\\websiteshubham\\node_modules\\.is-property-6OuiogDg',
+272 silly reify   'D:\\new_downloads\\websiteshubham\\node_modules\\lru.min': 'D:\\new_downloads\\websiteshubham\\node_modules\\.lru.min-RrfGs31Y',
+272 silly reify   'D:\\new_downloads\\websiteshubham\\node_modules\\long': 'D:\\new_downloads\\websiteshubham\\node_modules\\.long-yGHgQRjH',
+272 silly reify   'D:\\new_downloads\\websiteshubham\\node_modules\\mysql2': 'D:\\new_downloads\\websiteshubham\\node_modules\\.mysql2-n94DDR3C',
+272 silly reify   'D:\\new_downloads\\websiteshubham\\node_modules\\named-placeholders': 'D:\\new_downloads\\websiteshubham\\node_modules\\.named-placeholders-P9BDIeNg',
+272 silly reify   'D:\\new_downloads\\websiteshubham\\node_modules\\perfect-debounce': 'D:\\new_downloads\\websiteshubham\\node_modules\\.perfect-debounce-vLY6WPDA',
+272 silly reify   'D:\\new_downloads\\websiteshubham\\node_modules\\postgres': 'D:\\new_downloads\\websiteshubham\\node_modules\\.postgres-Zd9ISlLF',
+272 silly reify   'D:\\new_downloads\\websiteshubham\\node_modules\\proper-lockfile': 'D:\\new_downloads\\websiteshubham\\node_modules\\.proper-lockfile-zCMxdNDZ',
+272 silly reify   'D:\\new_downloads\\websiteshubham\\node_modules\\prisma': 'D:\\new_downloads\\websiteshubham\\node_modules\\.prisma-iv8aB9ei',
+272 silly reify   'D:\\new_downloads\\websiteshubham\\node_modules\\.bin\\prisma': 'D:\\new_downloads\\websiteshubham\\node_modules\\.bin\\.prisma-azFmbqZv',
+272 silly reify   'D:\\new_downloads\\websiteshubham\\node_modules\\.bin\\prisma.cmd': 'D:\\new_downloads\\websiteshubham\\node_modules\\.bin\\.prisma.cmd-Wy0cdLJP',
+272 silly reify   'D:\\new_downloads\\websiteshubham\\node_modules\\.bin\\prisma.ps1': 'D:\\new_downloads\\websiteshubham\\node_modules\\.bin\\.prisma.ps1-pigH7JFu',
+272 silly reify   'D:\\new_downloads\\websiteshubham\\node_modules\\rc9': 'D:\\new_downloads\\websiteshubham\\node_modules\\.rc9-giISvPND',
+272 silly reify   'D:\\new_downloads\\websiteshubham\\node_modules\\require-from-string': 'D:\\new_downloads\\websiteshubham\\node_modules\\.require-from-string-LRA0qkMG',
+272 silly reify   'D:\\new_downloads\\websiteshubham\\node_modules\\readdirp': 'D:\\new_downloads\\websiteshubham\\node_modules\\.readdirp-Zw3xdyet',
+272 silly reify   'D:\\new_downloads\\websiteshubham\\node_modules\\retry': 'D:\\new_downloads\\websiteshubham\\node_modules\\.retry-vgD0qMpW',
+272 silly reify   'D:\\new_downloads\\websiteshubham\\node_modules\\remeda': 'D:\\new_downloads\\websiteshubham\\node_modules\\.remeda-qFkuXgxO',
+272 silly reify   'D:\\new_downloads\\websiteshubham\\node_modules\\safer-buffer': 'D:\\new_downloads\\websiteshubham\\node_modules\\.safer-buffer-TouQUhcd',
+272 silly reify   'D:\\new_downloads\\websiteshubham\\node_modules\\seq-queue': 'D:\\new_downloads\\websiteshubham\\node_modules\\.seq-queue-HdAzGH3W',
+272 silly reify   'D:\\new_downloads\\websiteshubham\\node_modules\\std-env': 'D:\\new_downloads\\websiteshubham\\node_modules\\.std-env-5CV6fRLy',
+272 silly reify   'D:\\new_downloads\\websiteshubham\\node_modules\\signal-exit': 'D:\\new_downloads\\websiteshubham\\node_modules\\.signal-exit-i0akhW9M',
+272 silly reify   'D:\\new_downloads\\websiteshubham\\node_modules\\sqlstring': 'D:\\new_downloads\\websiteshubham\\node_modules\\.sqlstring-QyhWDihP',
+272 silly reify   'D:\\new_downloads\\websiteshubham\\node_modules\\valibot': 'D:\\new_downloads\\websiteshubham\\node_modules\\.valibot-a3iH4lva',
+272 silly reify   'D:\\new_downloads\\websiteshubham\\node_modules\\zeptomatch': 'D:\\new_downloads\\websiteshubham\\node_modules\\.zeptomatch-h9vKFudH',
+272 silly reify   'D:\\new_downloads\\websiteshubham\\node_modules\\@electric-sql\\pglite': 'D:\\new_downloads\\websiteshubham\\node_modules\\@electric-sql\\.pglite-WJZuSON5',
+272 silly reify   'D:\\new_downloads\\websiteshubham\\node_modules\\@electric-sql\\pglite-socket': 'D:\\new_downloads\\websiteshubham\\node_modules\\@electric-sql\\.pglite-socket-qtAXv66d',
+272 silly reify   'D:\\new_downloads\\websiteshubham\\node_modules\\.bin\\pglite-server': 'D:\\new_downloads\\websiteshubham\\node_modules\\.bin\\.pglite-server-yFD6Mqw5',
+272 silly reify   'D:\\new_downloads\\websiteshubham\\node_modules\\.bin\\pglite-server.cmd': 'D:\\new_downloads\\websiteshubham\\node_modules\\.bin\\.pglite-server.cmd-ja9UvMDZ',
+272 silly reify   'D:\\new_downloads\\websiteshubham\\node_modules\\.bin\\pglite-server.ps1': 'D:\\new_downloads\\websiteshubham\\node_modules\\.bin\\.pglite-server.ps1-njlP1lly',
+272 silly reify   'D:\\new_downloads\\websiteshubham\\node_modules\\@electric-sql\\pglite-tools': 'D:\\new_downloads\\websiteshubham\\node_modules\\@electric-sql\\.pglite-tools-kvz5UFkU',
+272 silly reify   'D:\\new_downloads\\websiteshubham\\node_modules\\@hono\\node-server': 'D:\\new_downloads\\websiteshubham\\node_modules\\@hono\\.node-server-ZcV35LMd',
+272 silly reify   'D:\\new_downloads\\websiteshubham\\node_modules\\@kurkle\\color': 'D:\\new_downloads\\websiteshubham\\node_modules\\@kurkle\\.color-NVOnTsWC',
+272 silly reify   'D:\\new_downloads\\websiteshubham\\node_modules\\@prisma\\debug': 'D:\\new_downloads\\websiteshubham\\node_modules\\@prisma\\.debug-PlFOsIf4',
+272 silly reify   'D:\\new_downloads\\websiteshubham\\node_modules\\@prisma\\config': 'D:\\new_downloads\\websiteshubham\\node_modules\\@prisma\\.config-4AlxTj92',
+272 silly reify   'D:\\new_downloads\\websiteshubham\\node_modules\\@prisma\\engines-version': 'D:\\new_downloads\\websiteshubham\\node_modules\\@prisma\\.engines-version-mhzqg0FI',
+272 silly reify   'D:\\new_downloads\\websiteshubham\\node_modules\\@prisma\\engines': 'D:\\new_downloads\\websiteshubham\\node_modules\\@prisma\\.engines-woJgbrLj',
+272 silly reify   'D:\\new_downloads\\websiteshubham\\node_modules\\@prisma\\fetch-engine': 'D:\\new_downloads\\websiteshubham\\node_modules\\@prisma\\.fetch-engine-ULa6dbql',
+272 silly reify   'D:\\new_downloads\\websiteshubham\\node_modules\\@prisma\\client': 'D:\\new_downloads\\websiteshubham\\node_modules\\@prisma\\.client-TfDxPMhP',
+272 silly reify   'D:\\new_downloads\\websiteshubham\\node_modules\\@prisma\\dev': 'D:\\new_downloads\\websiteshubham\\node_modules\\@prisma\\.dev-90doiwsE',
+272 silly reify   'D:\\new_downloads\\websiteshubham\\node_modules\\@prisma\\streams-local': 'D:\\new_downloads\\websiteshubham\\node_modules\\@prisma\\.streams-local-781kJfmE',
+272 silly reify   'D:\\new_downloads\\websiteshubham\\node_modules\\@prisma\\client-runtime-utils': 'D:\\new_downloads\\websiteshubham\\node_modules\\@prisma\\.client-runtime-utils-OogJ8CuC',
+272 silly reify   'D:\\new_downloads\\websiteshubham\\node_modules\\@prisma\\studio-core': 'D:\\new_downloads\\websiteshubham\\node_modules\\@prisma\\.studio-core-hpObtY9X',
+272 silly reify   'D:\\new_downloads\\websiteshubham\\node_modules\\@prisma\\get-platform': 'D:\\new_downloads\\websiteshubham\\node_modules\\@prisma\\.get-platform-EDjqFbz3',
+272 silly reify   'D:\\new_downloads\\websiteshubham\\node_modules\\@prisma\\query-plan-executor': 'D:\\new_downloads\\websiteshubham\\node_modules\\@prisma\\.query-plan-executor-LhhgR9Uv',
+272 silly reify   'D:\\new_downloads\\websiteshubham\\node_modules\\@radix-ui\\react-use-controllable-state': 'D:\\new_downloads\\websiteshubham\\node_modules\\@radix-ui\\.react-use-controllable-state-s9lPl2WO',
+272 silly reify   'D:\\new_downloads\\websiteshubham\\node_modules\\@radix-ui\\react-compose-refs': 'D:\\new_downloads\\websiteshubham\\node_modules\\@radix-ui\\.react-compose-refs-CAOoIyu2',
+272 silly reify   'D:\\new_downloads\\websiteshubham\\node_modules\\@radix-ui\\react-toggle': 'D:\\new_downloads\\websiteshubham\\node_modules\\@radix-ui\\.react-toggle-7DXRAJzq',
+272 silly reify   'D:\\new_downloads\\websiteshubham\\node_modules\\@radix-ui\\react-primitive': 'D:\\new_downloads\\websiteshubham\\node_modules\\@radix-ui\\.react-primitive-DYFX3cQf',
+272 silly reify   'D:\\new_downloads\\websiteshubham\\node_modules\\@radix-ui\\react-slot': 'D:\\new_downloads\\websiteshubham\\node_modules\\@radix-ui\\.react-slot-JGFaWRlV',
+272 silly reify   'D:\\new_downloads\\websiteshubham\\node_modules\\@radix-ui\\primitive': 'D:\\new_downloads\\websiteshubham\\node_modules\\@radix-ui\\.primitive-xbiDVsRa',
+272 silly reify   'D:\\new_downloads\\websiteshubham\\node_modules\\@radix-ui\\react-use-effect-event': 'D:\\new_downloads\\websiteshubham\\node_modules\\@radix-ui\\.react-use-effect-event-puzHUaEh',
+272 silly reify   'D:\\new_downloads\\websiteshubham\\node_modules\\@radix-ui\\react-use-layout-effect': 'D:\\new_downloads\\websiteshubham\\node_modules\\@radix-ui\\.react-use-layout-effect-obF7bAP5'
+272 silly reify }
+273 verbose reify failed optional dependency D:\new_downloads\websiteshubham\node_modules\@tailwindcss\oxide-wasm32-wasi
+274 silly reify mark deleted [
+274 silly reify   'D:\\new_downloads\\websiteshubham\\node_modules\\@tailwindcss\\oxide-wasm32-wasi'
+274 silly reify ]
+275 verbose reify failed optional dependency D:\new_downloads\websiteshubham\node_modules\@emnapi\wasi-threads
+276 silly reify mark deleted [
+276 silly reify   'D:\\new_downloads\\websiteshubham\\node_modules\\@emnapi\\wasi-threads'
+276 silly reify ]
+277 silly audit bulk request {
+277 silly audit   '@alloc/quick-lru': [ '5.2.0' ],
+277 silly audit   '@emnapi/wasi-threads': [ '1.2.2', '1.2.1' ],
+277 silly audit   '@eslint-community/eslint-utils': [ '4.9.1' ],
+277 silly audit   'eslint-visitor-keys': [ '3.4.3', '5.0.1', '4.2.1' ],
+277 silly audit   '@eslint-community/regexpp': [ '4.12.2' ],
+277 silly audit   '@eslint/config-array': [ '0.21.2' ],
+277 silly audit   '@eslint/config-helpers': [ '0.4.2' ],
+277 silly audit   '@eslint/core': [ '0.17.0' ],
+277 silly audit   '@eslint/eslintrc': [ '3.3.5' ],
+277 silly audit   '@eslint/js': [ '9.39.4' ],
+277 silly audit   '@eslint/object-schema': [ '2.1.7' ],
+277 silly audit   '@eslint/plugin-kit': [ '0.4.1' ],
+277 silly audit   '@google/generative-ai': [ '0.24.1' ],
+277 silly audit   '@humanfs/core': [ '0.19.2' ],
+277 silly audit   '@humanfs/node': [ '0.16.8' ],
+277 silly audit   '@humanfs/types': [ '0.15.0' ],
+277 silly audit   '@humanwhocodes/module-importer': [ '1.0.1' ],
+277 silly audit   '@humanwhocodes/retry': [ '0.4.3' ],
+277 silly audit   '@img/colour': [ '1.1.0' ],
+277 silly audit   '@img/sharp-darwin-arm64': [ '0.34.5' ],
+277 silly audit   '@img/sharp-darwin-x64': [ '0.34.5' ],
+277 silly audit   '@img/sharp-libvips-darwin-arm64': [ '1.2.4' ],
+277 silly audit   '@img/sharp-libvips-darwin-x64': [ '1.2.4' ],
+277 silly audit   '@img/sharp-libvips-linux-arm': [ '1.2.4' ],
+277 silly audit   '@img/sharp-libvips-linux-arm64': [ '1.2.4' ],
+277 silly audit   '@img/sharp-libvips-linux-ppc64': [ '1.2.4' ],
+277 silly audit   '@img/sharp-libvips-linux-riscv64': [ '1.2.4' ],
+277 silly audit   '@img/sharp-libvips-linux-s390x': [ '1.2.4' ],
+277 silly audit   '@img/sharp-libvips-linux-x64': [ '1.2.4' ],
+277 silly audit   '@img/sharp-libvips-linuxmusl-arm64': [ '1.2.4' ],
+277 silly audit   '@img/sharp-libvips-linuxmusl-x64': [ '1.2.4' ],
+277 silly audit   '@img/sharp-linux-arm': [ '0.34.5' ],
+277 silly audit   '@img/sharp-linux-arm64': [ '0.34.5' ],
+277 silly audit   '@img/sharp-linux-ppc64': [ '0.34.5' ],
+277 silly audit   '@img/sharp-linux-riscv64': [ '0.34.5' ],
+277 silly audit   '@img/sharp-linux-s390x': [ '0.34.5' ],
+277 silly audit   '@img/sharp-linux-x64': [ '0.34.5' ],
+277 silly audit   '@img/sharp-linuxmusl-arm64': [ '0.34.5' ],
+277 silly audit   '@img/sharp-linuxmusl-x64': [ '0.34.5' ],
+277 silly audit   '@img/sharp-wasm32': [ '0.34.5' ],
+277 silly audit   '@img/sharp-win32-arm64': [ '0.34.5' ],
+277 silly audit   '@img/sharp-win32-ia32': [ '0.34.5' ],
+277 silly audit   '@img/sharp-win32-x64': [ '0.34.5' ],
+277 silly audit   '@jridgewell/gen-mapping': [ '0.3.13' ],
+277 silly audit   '@jridgewell/remapping': [ '2.3.5' ],
+277 silly audit   '@jridgewell/resolve-uri': [ '3.1.2' ],
+277 silly audit   '@jridgewell/sourcemap-codec': [ '1.5.5' ],
+277 silly audit   '@jridgewell/trace-mapping': [ '0.3.31' ],
+277 silly audit   '@napi-rs/wasm-runtime': [ '1.1.4' ],
+277 silly audit   '@next/env': [ '15.5.19' ],
+277 silly audit   '@next/eslint-plugin-next': [ '15.5.19' ],
+277 silly audit   '@next/swc-darwin-arm64': [ '15.5.19' ],
+277 silly audit   '@next/swc-darwin-x64': [ '15.5.19' ],
+277 silly audit   '@next/swc-linux-arm64-gnu': [ '15.5.19' ],
+277 silly audit   '@next/swc-linux-arm64-musl': [ '15.5.19' ],
+277 silly audit   '@next/swc-linux-x64-gnu': [ '15.5.19' ],
+277 silly audit   '@next/swc-linux-x64-musl': [ '15.5.19' ],
+277 silly audit   '@next/swc-win32-arm64-msvc': [ '15.5.19' ],
+277 silly audit   '@next/swc-win32-x64-msvc': [ '15.5.19' ],
+277 silly audit   '@nodelib/fs.scandir': [ '2.1.5' ],
+277 silly audit   '@nodelib/fs.stat': [ '2.0.5' ],
+277 silly audit   '@nodelib/fs.walk': [ '1.2.8' ],
+277 silly audit   '@nolyfill/is-core-module': [ '1.0.39' ],
+277 silly audit   '@posthog/core': [ '1.30.10' ],
+277 silly audit   '@posthog/types': [ '1.382.0' ],
+277 silly audit   ajv: [ '6.15.0' ],
+277 silly audit   'json-schema-traverse': [ '0.4.1' ],
+277 silly audit   '@rtsao/scc': [ '1.1.0' ],
+277 silly audit   '@rushstack/eslint-patch': [ '1.16.1' ],
+277 silly audit   '@supabase/auth-js': [ '2.108.0' ],
+277 silly audit   '@supabase/functions-js': [ '2.108.0' ],
+277 silly audit   '@supabase/phoenix': [ '0.4.2' ],
+277 silly audit   '@supabase/postgrest-js': [ '2.108.0' ],
+277 silly audit   '@supabase/realtime-js': [ '2.108.0' ],
+277 silly audit   '@supabase/storage-js': [ '2.108.0' ],
+277 silly audit   '@supabase/supabase-js': [ '2.108.0' ],
+277 silly audit   '@swc/helpers': [ '0.5.15' ],
+277 silly audit   '@tailwindcss/node': [ '4.3.0' ],
+277 silly audit   '@tailwindcss/oxide': [ '4.3.0' ],
+277 silly audit   '@tailwindcss/oxide-android-arm64': [ '4.3.0' ],
+277 silly audit   '@tailwindcss/oxide-darwin-arm64': [ '4.3.0' ],
+277 silly audit   '@tailwindcss/oxide-darwin-x64': [ '4.3.0' ],
+277 silly audit   '@tailwindcss/oxide-freebsd-x64': [ '4.3.0' ],
+277 silly audit   '@tailwindcss/oxide-linux-arm-gnueabihf': [ '4.3.0' ],
+277 silly audit   '@tailwindcss/oxide-linux-arm64-gnu': [ '4.3.0' ],
+277 silly audit   '@tailwindcss/oxide-linux-arm64-musl': [ '4.3.0' ],
+277 silly audit   '@tailwindcss/oxide-linux-x64-gnu': [ '4.3.0' ],
+277 silly audit   '@tailwindcss/oxide-linux-x64-musl': [ '4.3.0' ],
+277 silly audit   '@tailwindcss/oxide-win32-arm64-msvc': [ '4.3.0' ],
+277 silly audit   '@tailwindcss/oxide-win32-x64-msvc': [ '4.3.0' ],
+277 silly audit   '@tailwindcss/postcss': [ '4.3.0' ],
+277 silly audit   '@tybys/wasm-util': [ '0.10.2' ],
+277 silly audit   '@types/bcryptjs': [ '2.4.6' ],
+277 silly audit   '@types/estree': [ '1.0.9' ],
+277 silly audit   '@types/json-schema': [ '7.0.15' ],
+277 silly audit   '@types/json5': [ '0.0.29' ],
+277 silly audit   '@types/node': [ '20.19.42' ],
+277 silly audit   '@types/react': [ '19.2.17' ],
+277 silly audit   '@types/react-dom': [ '19.2.3' ],
+277 silly audit   '@types/trusted-types': [ '2.0.7' ],
+277 silly audit   '@typescript-eslint/eslint-plugin': [ '8.60.1' ],
+277 silly audit   ignore: [ '7.0.5', '5.3.2' ],
+277 silly audit   '@typescript-eslint/parser': [ '8.60.1' ],
+277 silly audit   '@typescript-eslint/project-service': [ '8.60.1' ],
+277 silly audit   '@typescript-eslint/scope-manager': [ '8.60.1' ],
+277 silly audit   '@typescript-eslint/tsconfig-utils': [ '8.60.1' ],
+277 silly audit   '@typescript-eslint/type-utils': [ '8.60.1' ],
+277 silly audit   '@typescript-eslint/types': [ '8.60.1' ],
+277 silly audit   '@typescript-eslint/typescript-estree': [ '8.60.1' ],
+277 silly audit   'balanced-match': [ '4.0.4', '1.0.2' ],
+277 silly audit   'brace-expansion': [ '5.0.6', '1.1.15' ],
+277 silly audit   minimatch: [ '10.2.5', '3.1.5' ],
+277 silly audit   '@typescript-eslint/utils': [ '8.60.1' ],
+277 silly audit   '@typescript-eslint/visitor-keys': [ '8.60.1' ],
+277 silly audit   '@unrs/resolver-binding-android-arm-eabi': [ '1.12.2' ],
+277 silly audit   '@unrs/resolver-binding-android-arm64': [ '1.12.2' ],
+277 silly audit   '@unrs/resolver-binding-darwin-arm64': [ '1.12.2' ],
+277 silly audit   '@unrs/resolver-binding-darwin-x64': [ '1.12.2' ],
+277 silly audit   '@unrs/resolver-binding-freebsd-x64': [ '1.12.2' ],
+277 silly audit   '@unrs/resolver-binding-linux-arm-gnueabihf': [ '1.12.2' ],
+277 silly audit   '@unrs/resolver-binding-linux-arm-musleabihf': [ '1.12.2' ],
+277 silly audit   '@unrs/resolver-binding-linux-arm64-gnu': [ '1.12.2' ],
+277 silly audit   '@unrs/resolver-binding-linux-arm64-musl': [ '1.12.2' ],
+277 silly audit   '@unrs/resolver-binding-linux-loong64-gnu': [ '1.12.2' ],
+277 silly audit   '@unrs/resolver-binding-linux-loong64-musl': [ '1.12.2' ],
+277 silly audit   '@unrs/resolver-binding-linux-ppc64-gnu': [ '1.12.2' ],
+277 silly audit   '@unrs/resolver-binding-linux-riscv64-gnu': [ '1.12.2' ],
+277 silly audit   '@unrs/resolver-binding-linux-riscv64-musl': [ '1.12.2' ],
+277 silly audit   '@unrs/resolver-binding-linux-s390x-gnu': [ '1.12.2' ],
+277 silly audit   '@unrs/resolver-binding-linux-x64-gnu': [ '1.12.2' ],
+277 silly audit   '@unrs/resolver-binding-linux-x64-musl': [ '1.12.2' ],
+277 silly audit   '@unrs/resolver-binding-openharmony-arm64': [ '1.12.2' ],
+277 silly audit   '@unrs/resolver-binding-wasm32-wasi': [ '1.12.2' ],
+277 silly audit   '@emnapi/core': [ '1.10.0' ],
+277 silly audit   '@emnapi/runtime': [ '1.10.0' ],
+277 silly audit   '@unrs/resolver-binding-win32-arm64-msvc': [ '1.12.2' ],
+277 silly audit   '@unrs/resolver-binding-win32-ia32-msvc': [ '1.12.2' ],
+277 silly audit   '@unrs/resolver-binding-win32-x64-msvc': [ '1.12.2' ],
+277 silly audit   acorn: [ '8.16.0' ],
+277 silly audit   'acorn-jsx': [ '5.3.2' ],
+277 silly audit   'ansi-styles': [ '4.3.0' ],
+277 silly audit   argparse: [ '2.0.1' ],
+277 silly audit   'aria-query': [ '5.3.2' ],
+277 silly audit   'array-buffer-byte-length': [ '1.0.2' ],
+277 silly audit   'array-includes': [ '3.1.9' ],
+277 silly audit   'array.prototype.findlast': [ '1.2.5' ],
+277 silly audit   'array.prototype.findlastindex': [ '1.2.6' ],
+277 silly audit   'array.prototype.flat': [ '1.3.3' ],
+277 silly audit   'array.prototype.flatmap': [ '1.3.3' ],
+277 silly audit   'array.prototype.tosorted': [ '1.1.4' ],
+277 silly audit   'arraybuffer.prototype.slice': [ '1.0.4' ],
+277 silly audit   'ast-types-flow': [ '0.0.8' ],
+277 silly audit   'async-function': [ '1.0.0' ],
+277 silly audit   'available-typed-arrays': [ '1.0.7' ],
+277 silly audit   'axe-core': [ '4.12.0' ],
+277 silly audit   'axobject-query': [ '4.1.0' ],
+277 silly audit   bcryptjs: [ '3.0.3' ],
+277 silly audit   braces: [ '3.0.3' ],
+277 silly audit   'call-bind': [ '1.0.9' ],
+277 silly audit   'call-bind-apply-helpers': [ '1.0.2' ],
+277 silly audit   'call-bound': [ '1.0.4' ],
+277 silly audit   callsites: [ '3.1.0' ],
+277 silly audit   'caniuse-lite': [ '1.0.30001797' ],
+277 silly audit   chalk: [ '4.1.2' ],
+277 silly audit   'class-variance-authority': [ '0.7.1' ],
+277 silly audit   'client-only': [ '0.0.1' ],
+277 silly audit   clsx: [ '2.1.1' ],
+277 silly audit   'color-convert': [ '2.0.1' ],
+277 silly audit   'color-name': [ '1.1.4' ],
+277 silly audit   'concat-map': [ '0.0.1' ],
+277 silly audit   'core-js': [ '3.49.0' ],
+277 silly audit   'cross-spawn': [ '7.0.6' ],
+277 silly audit   csstype: [ '3.2.3' ],
+277 silly audit   'damerau-levenshtein': [ '1.0.8' ],
+277 silly audit   'data-view-buffer': [ '1.0.2' ],
+277 silly audit   'data-view-byte-length': [ '1.0.2' ],
+277 silly audit   'data-view-byte-offset': [ '1.0.1' ],
+277 silly audit   debug: [ '4.4.3', '3.2.7' ],
+277 silly audit   'deep-is': [ '0.1.4' ],
+277 silly audit   'define-data-property': [ '1.1.4' ],
+277 silly audit   'define-properties': [ '1.2.1' ],
+277 silly audit   'detect-libc': [ '2.1.2' ],
+277 silly audit   doctrine: [ '2.1.0' ],
+277 silly audit   dompurify: [ '3.4.8' ],
+277 silly audit   'dunder-proto': [ '1.0.1' ],
+277 silly audit   'emoji-regex': [ '9.2.2' ],
+277 silly audit   'enhanced-resolve': [ '5.23.0' ],
+277 silly audit   'es-abstract': [ '1.24.2' ],
+277 silly audit   'es-define-property': [ '1.0.1' ],
+277 silly audit   'es-errors': [ '1.3.0' ],
+277 silly audit   'es-iterator-helpers': [ '1.3.2' ],
+277 silly audit   'es-object-atoms': [ '1.1.2' ],
+277 silly audit   'es-set-tostringtag': [ '2.1.0' ],
+277 silly audit   'es-shim-unscopables': [ '1.1.0' ],
+277 silly audit   'es-to-primitive': [ '1.3.0' ],
+277 silly audit   'escape-string-regexp': [ '4.0.0' ],
+277 silly audit   eslint: [ '9.39.4' ],
+277 silly audit   'eslint-config-next': [ '15.5.19' ],
+277 silly audit   'eslint-import-resolver-node': [ '0.3.10' ],
+277 silly audit   'eslint-import-resolver-typescript': [ '3.10.1' ],
+277 silly audit   'eslint-module-utils': [ '2.13.0' ],
+277 silly audit   'eslint-plugin-import': [ '2.32.0' ],
+277 silly audit   semver: [ '6.3.1', '7.8.2' ],
+277 silly audit   'eslint-plugin-jsx-a11y': [ '6.10.2' ],
+277 silly audit   'eslint-plugin-react': [ '7.37.5' ],
+277 silly audit   'eslint-plugin-react-hooks': [ '5.2.0' ],
+277 silly audit   'eslint-scope': [ '8.4.0' ],
+277 silly audit   espree: [ '10.4.0' ],
+277 silly audit   esquery: [ '1.7.0' ],
+277 silly audit   esrecurse: [ '4.3.0' ],
+277 silly audit   estraverse: [ '5.3.0' ],
+277 silly audit   esutils: [ '2.0.3' ],
+277 silly audit   'fast-deep-equal': [ '3.1.3' ],
+277 silly audit   'fast-glob': [ '3.3.1' ],
+277 silly audit   'glob-parent': [ '5.1.2', '6.0.2' ],
+277 silly audit   'fast-json-stable-stringify': [ '2.1.0' ],
+277 silly audit   'fast-levenshtein': [ '2.0.6' ],
+277 silly audit   fastq: [ '1.20.1' ],
+277 silly audit   fflate: [ '0.4.8' ],
+277 silly audit   'file-entry-cache': [ '8.0.0' ],
+277 silly audit   'fill-range': [ '7.1.1' ],
+277 silly audit   'find-up': [ '5.0.0' ],
+277 silly audit   'flat-cache': [ '4.0.1' ],
+277 silly audit   flatted: [ '3.4.2' ],
+277 silly audit   'for-each': [ '0.3.5' ],
+277 silly audit   'function-bind': [ '1.1.2' ],
+277 silly audit   'function.prototype.name': [ '1.1.8' ],
+277 silly audit   'functions-have-names': [ '1.2.3' ],
+277 silly audit   'generator-function': [ '2.0.1' ],
+277 silly audit   'get-intrinsic': [ '1.3.0' ],
+277 silly audit   'get-proto': [ '1.0.1' ],
+277 silly audit   'get-symbol-description': [ '1.1.0' ],
+277 silly audit   'get-tsconfig': [ '4.14.0' ],
+277 silly audit   globals: [ '14.0.0' ],
+277 silly audit   globalthis: [ '1.0.4' ],
+277 silly audit   gopd: [ '1.2.0' ],
+277 silly audit   'graceful-fs': [ '4.2.11' ],
+277 silly audit   'has-bigints': [ '1.1.0' ],
+277 silly audit   'has-flag': [ '4.0.0' ],
+277 silly audit   'has-property-descriptors': [ '1.0.2' ],
+277 silly audit   'has-proto': [ '1.2.0' ],
+277 silly audit   'has-symbols': [ '1.1.0' ],
+277 silly audit   'has-tostringtag': [ '1.0.2' ],
+277 silly audit   hasown: [ '2.0.4' ],
+277 silly audit   'iceberg-js': [ '0.8.1' ],
+277 silly audit   'import-fresh': [ '3.3.1' ],
+277 silly audit   imurmurhash: [ '0.1.4' ],
+277 silly audit   'internal-slot': [ '1.1.0' ],
+277 silly audit   'is-array-buffer': [ '3.0.5' ],
+277 silly audit   'is-async-function': [ '2.1.1' ],
+277 silly audit   'is-bigint': [ '1.1.0' ],
+277 silly audit   'is-boolean-object': [ '1.2.2' ],
+277 silly audit   'is-bun-module': [ '2.0.0' ],
+277 silly audit   'is-callable': [ '1.2.7' ],
+277 silly audit   'is-core-module': [ '2.16.2' ],
+277 silly audit   'is-data-view': [ '1.0.2' ],
+277 silly audit   'is-date-object': [ '1.1.0' ],
+277 silly audit   'is-extglob': [ '2.1.1' ],
+277 silly audit   'is-finalizationregistry': [ '1.1.1' ],
+277 silly audit   'is-generator-function': [ '1.1.2' ],
+277 silly audit   'is-glob': [ '4.0.3' ],
+277 silly audit   'is-map': [ '2.0.3' ],
+277 silly audit   'is-negative-zero': [ '2.0.3' ],
+277 silly audit   'is-number': [ '7.0.0' ],
+277 silly audit   'is-number-object': [ '1.1.1' ],
+277 silly audit   'is-regex': [ '1.2.1' ],
+277 silly audit   'is-set': [ '2.0.3' ],
+277 silly audit   'is-shared-array-buffer': [ '1.0.4' ],
+277 silly audit   'is-string': [ '1.1.1' ],
+277 silly audit   'is-symbol': [ '1.1.1' ],
+277 silly audit   'is-typed-array': [ '1.1.15' ],
+277 silly audit   'is-weakmap': [ '2.0.2' ],
+277 silly audit   'is-weakref': [ '1.1.1' ],
+277 silly audit   'is-weakset': [ '2.0.4' ],
+277 silly audit   isarray: [ '2.0.5' ],
+277 silly audit   isexe: [ '2.0.0' ],
+277 silly audit   'iterator.prototype': [ '1.1.5' ],
+277 silly audit   jiti: [ '2.7.0' ],
+277 silly audit   jose: [ '6.2.3' ],
+277 silly audit   'js-tokens': [ '4.0.0' ],
+277 silly audit   'js-yaml': [ '4.2.0' ],
+277 silly audit   'json-buffer': [ '3.0.1' ],
+277 silly audit   'json-stable-stringify-without-jsonify': [ '1.0.1' ],
+277 silly audit   json5: [ '1.0.2' ],
+277 silly audit   'jsx-ast-utils': [ '3.3.5' ],
+277 silly audit   keyv: [ '4.5.4' ],
+277 silly audit   'language-subtag-registry': [ '0.3.23' ],
+277 silly audit   'language-tags': [ '1.0.9' ],
+277 silly audit   levn: [ '0.4.1' ],
+277 silly audit   lightningcss: [ '1.32.0' ],
+277 silly audit   'lightningcss-android-arm64': [ '1.32.0' ],
+277 silly audit   'lightningcss-darwin-arm64': [ '1.32.0' ],
+277 silly audit   'lightningcss-darwin-x64': [ '1.32.0' ],
+277 silly audit   'lightningcss-freebsd-x64': [ '1.32.0' ],
+277 silly audit   'lightningcss-linux-arm-gnueabihf': [ '1.32.0' ],
+277 silly audit   'lightningcss-linux-arm64-gnu': [ '1.32.0' ],
+277 silly audit   'lightningcss-linux-arm64-musl': [ '1.32.0' ],
+277 silly audit   'lightningcss-linux-x64-gnu': [ '1.32.0' ],
+277 silly audit   'lightningcss-linux-x64-musl': [ '1.32.0' ],
+277 silly audit   'lightningcss-win32-arm64-msvc': [ '1.32.0' ],
+277 silly audit   'lightningcss-win32-x64-msvc': [ '1.32.0' ],
+277 silly audit   'locate-path': [ '6.0.0' ],
+277 silly audit   'lodash.merge': [ '4.6.2' ],
+277 silly audit   'loose-envify': [ '1.4.0' ],
+277 silly audit   'lucide-react': [ '1.17.0' ],
+277 silly audit   'magic-string': [ '0.30.21' ],
+277 silly audit   'math-intrinsics': [ '1.1.0' ],
+277 silly audit   merge2: [ '1.4.1' ],
+277 silly audit   micromatch: [ '4.0.8' ],
+277 silly audit   minimist: [ '1.2.8' ],
+277 silly audit   ms: [ '2.1.3' ],
+277 silly audit   nanoid: [ '3.3.12' ],
+277 silly audit   'napi-postinstall': [ '0.3.4' ],
+277 silly audit   'natural-compare': [ '1.4.0' ],
+277 silly audit   next: [ '15.5.19' ],
+277 silly audit   'next-themes': [ '0.4.6' ],
+277 silly audit   postcss: [ '8.4.31', '8.5.15' ],
+277 silly audit   'node-exports-info': [ '1.6.0' ],
+277 silly audit   'object-assign': [ '4.1.1' ],
+277 silly audit   'object-inspect': [ '1.13.4' ],
+277 silly audit   'object-keys': [ '1.1.1' ],
+277 silly audit   'object.assign': [ '4.1.7' ],
+277 silly audit   'object.entries': [ '1.1.9' ],
+277 silly audit   'object.fromentries': [ '2.0.8' ],
+277 silly audit   'object.groupby': [ '1.0.3' ],
+277 silly audit   'object.values': [ '1.2.1' ],
+277 silly audit   optionator: [ '0.9.4' ],
+277 silly audit   'own-keys': [ '1.0.1' ],
+277 silly audit   'p-limit': [ '3.1.0' ],
+277 silly audit   'p-locate': [ '5.0.0' ],
+277 silly audit   'parent-module': [ '1.0.1' ],
+277 silly audit   'path-exists': [ '4.0.0' ],
+277 silly audit   'path-key': [ '3.1.1' ],
+277 silly audit   'path-parse': [ '1.0.7' ],
+277 silly audit   picocolors: [ '1.1.1' ],
+277 silly audit   picomatch: [ '2.3.2', '4.0.4' ],
+277 silly audit   'possible-typed-array-names': [ '1.1.0' ],
+277 silly audit   'posthog-js': [ '1.382.0' ],
+277 silly audit   preact: [ '10.29.2' ],
+277 silly audit   'prelude-ls': [ '1.2.1' ],
+277 silly audit   'prop-types': [ '15.8.1' ],
+277 silly audit   punycode: [ '2.3.1' ],
+277 silly audit   'query-selector-shadow-dom': [ '1.0.1' ],
+277 silly audit   'queue-microtask': [ '1.2.3' ],
+277 silly audit   react: [ '19.2.4' ],
+277 silly audit   'react-dom': [ '19.2.4' ],
+277 silly audit   'react-is': [ '16.13.1' ],
+277 silly audit   'reflect.getprototypeof': [ '1.0.10' ],
+277 silly audit   'regexp.prototype.flags': [ '1.5.4' ],
+277 silly audit   resolve: [ '2.0.0-next.7' ],
+277 silly audit   'resolve-from': [ '4.0.0' ],
+277 silly audit   'resolve-pkg-maps': [ '1.0.0' ],
+277 silly audit   reusify: [ '1.1.0' ],
+277 silly audit   'run-parallel': [ '1.2.0' ],
+277 silly audit   'safe-array-concat': [ '1.1.4' ],
+277 silly audit   'safe-push-apply': [ '1.0.0' ],
+277 silly audit   'safe-regex-test': [ '1.1.0' ],
+277 silly audit   scheduler: [ '0.27.0' ],
+277 silly audit   'set-function-length': [ '1.2.2' ],
+277 silly audit   'set-function-name': [ '2.0.2' ],
+277 silly audit   'set-proto': [ '1.0.0' ],
+277 silly audit   sharp: [ '0.34.5' ],
+277 silly audit   'shebang-command': [ '2.0.0' ],
+277 silly audit   'shebang-regex': [ '3.0.0' ],
+277 silly audit   'side-channel': [ '1.1.0' ],
+277 silly audit   'side-channel-list': [ '1.0.1' ],
+277 silly audit   'side-channel-map': [ '1.0.1' ],
+277 silly audit   'side-channel-weakmap': [ '1.0.2' ],
+277 silly audit   'source-map-js': [ '1.2.1' ],
+277 silly audit   'stable-hash': [ '0.0.5' ],
+277 silly audit   'stop-iteration-iterator': [ '1.1.0' ],
+277 silly audit   'string.prototype.includes': [ '2.0.1' ],
+277 silly audit   'string.prototype.matchall': [ '4.0.12' ],
+277 silly audit   'string.prototype.repeat': [ '1.0.0' ],
+277 silly audit   'string.prototype.trim': [ '1.2.11' ],
+277 silly audit   'string.prototype.trimend': [ '1.0.10' ],
+277 silly audit   'string.prototype.trimstart': [ '1.0.8' ],
+277 silly audit   'strip-bom': [ '3.0.0' ],
+277 silly audit   'strip-json-comments': [ '3.1.1' ],
+277 silly audit   'styled-jsx': [ '5.1.6' ],
+277 silly audit   'supports-color': [ '7.2.0' ],
+277 silly audit   'supports-preserve-symlinks-flag': [ '1.0.0' ],
+277 silly audit   'tailwind-merge': [ '3.6.0' ],
+277 silly audit   tailwindcss: [ '4.3.0' ],
+277 silly audit   tapable: [ '2.3.3' ],
+277 silly audit   tinyglobby: [ '0.2.17' ],
+277 silly audit   fdir: [ '6.5.0' ],
+277 silly audit   'to-regex-range': [ '5.0.1' ],
+277 silly audit   'ts-api-utils': [ '2.5.0' ],
+277 silly audit   'tsconfig-paths': [ '3.15.0' ],
+277 silly audit   tslib: [ '2.8.1' ],
+277 silly audit   'type-check': [ '0.4.0' ],
+277 silly audit   'typed-array-buffer': [ '1.0.3' ],
+277 silly audit   'typed-array-byte-length': [ '1.0.3' ],
+277 silly audit   'typed-array-byte-offset': [ '1.0.4' ],
+277 silly audit   'typed-array-length': [ '1.0.8' ],
+277 silly audit   typescript: [ '5.9.3' ],
+277 silly audit   'unbox-primitive': [ '1.1.0' ],
+277 silly audit   'undici-types': [ '6.21.0' ],
+277 silly audit   'unrs-resolver': [ '1.12.2' ],
+277 silly audit   'uri-js': [ '4.4.1' ],
+277 silly audit   'web-vitals': [ '5.3.0' ],
+277 silly audit   which: [ '2.0.2' ],
+277 silly audit   'which-boxed-primitive': [ '1.1.1' ],
+277 silly audit   'which-builtin-type': [ '1.2.1' ],
+277 silly audit   'which-collection': [ '1.0.2' ],
+277 silly audit   'which-typed-array': [ '1.1.22' ],
+277 silly audit   'word-wrap': [ '1.2.5' ],
+277 silly audit   'yocto-queue': [ '0.1.0' ],
+277 silly audit   zod: [ '4.4.3' ],
+277 silly audit   '@prisma/client': [ '6.19.3' ],
+277 silly audit   prisma: [ '6.19.3' ],
+277 silly audit   '@prisma/config': [ '6.19.3' ],
+277 silly audit   '@prisma/engines': [ '6.19.3' ],
+277 silly audit   c12: [ '3.1.0' ],
+277 silly audit   'deepmerge-ts': [ '7.1.5' ],
+277 silly audit   effect: [ '3.21.0' ],
+277 silly audit   empathic: [ '2.0.0' ],
+277 silly audit   '@prisma/debug': [ '6.19.3' ],
+277 silly audit   '@prisma/engines-version': [ '7.1.1-3.c2990dca591cba766e3b7ef5d9e8a84796e47ab7' ],
+277 silly audit   '@prisma/fetch-engine': [ '6.19.3' ],
+277 silly audit   '@prisma/get-platform': [ '6.19.3' ],
+277 silly audit   chokidar: [ '4.0.3' ],
+277 silly audit   confbox: [ '0.2.4' ],
+277 silly audit   defu: [ '6.1.7' ],
+277 silly audit   dotenv: [ '16.6.1' ],
+277 silly audit   exsolve: [ '1.0.8' ],
+277 silly audit   giget: [ '2.0.0' ],
+277 silly audit   ohash: [ '2.0.11' ],
+277 silly audit   pathe: [ '2.0.3' ],
+277 silly audit   'perfect-debounce': [ '1.0.0' ],
+277 silly audit   'pkg-types': [ '2.3.1' ],
+277 silly audit   rc9: [ '2.1.2' ],
+277 silly audit   readdirp: [ '4.1.2' ],
+277 silly audit   '@standard-schema/spec': [ '1.1.0' ],
+277 silly audit   'fast-check': [ '3.23.2' ],
+277 silly audit   'pure-rand': [ '6.1.0' ],
+277 silly audit   citty: [ '0.1.6', '0.2.2' ],
+277 silly audit   consola: [ '3.4.2' ],
+277 silly audit   'node-fetch-native': [ '1.6.7' ],
+277 silly audit   nypm: [ '0.6.6' ],
+277 silly audit   tinyexec: [ '1.2.4' ],
+277 silly audit   destr: [ '2.0.5' ],
+277 silly audit   '@tailwindcss/oxide-wasm32-wasi': [ '4.3.0' ]
+277 silly audit }
+278 verbose reify failed optional dependency D:\new_downloads\websiteshubham\node_modules\lightningcss-win32-arm64-msvc
+279 silly reify mark deleted [
+279 silly reify   'D:\\new_downloads\\websiteshubham\\node_modules\\lightningcss-win32-arm64-msvc'
+279 silly reify ]
+280 verbose reify failed optional dependency D:\new_downloads\websiteshubham\node_modules\lightningcss-linux-x64-musl
+281 silly reify mark deleted [
+281 silly reify   'D:\\new_downloads\\websiteshubham\\node_modules\\lightningcss-linux-x64-musl'
+281 silly reify ]
+282 verbose reify failed optional dependency D:\new_downloads\websiteshubham\node_modules\lightningcss-linux-x64-gnu
+283 silly reify mark deleted [
+283 silly reify   'D:\\new_downloads\\websiteshubham\\node_modules\\lightningcss-linux-x64-gnu'
+283 silly reify ]
+284 verbose reify failed optional dependency D:\new_downloads\websiteshubham\node_modules\lightningcss-linux-arm64-musl
+285 silly reify mark deleted [
+285 silly reify   'D:\\new_downloads\\websiteshubham\\node_modules\\lightningcss-linux-arm64-musl'
+285 silly reify ]
+286 verbose reify failed optional dependency D:\new_downloads\websiteshubham\node_modules\lightningcss-linux-arm64-gnu
+287 silly reify mark deleted [
+287 silly reify   'D:\\new_downloads\\websiteshubham\\node_modules\\lightningcss-linux-arm64-gnu'
+287 silly reify ]
+288 verbose reify failed optional dependency D:\new_downloads\websiteshubham\node_modules\lightningcss-linux-arm-gnueabihf
+289 silly reify mark deleted [
+289 silly reify   'D:\\new_downloads\\websiteshubham\\node_modules\\lightningcss-linux-arm-gnueabihf'
+289 silly reify ]
+290 verbose reify failed optional dependency D:\new_downloads\websiteshubham\node_modules\lightningcss-freebsd-x64
+291 silly reify mark deleted [
+291 silly reify   'D:\\new_downloads\\websiteshubham\\node_modules\\lightningcss-freebsd-x64'
+291 silly reify ]
+292 verbose reify failed optional dependency D:\new_downloads\websiteshubham\node_modules\lightningcss-darwin-x64
+293 silly reify mark deleted [
+293 silly reify   'D:\\new_downloads\\websiteshubham\\node_modules\\lightningcss-darwin-x64'
+293 silly reify ]
+294 verbose reify failed optional dependency D:\new_downloads\websiteshubham\node_modules\lightningcss-darwin-arm64
+295 silly reify mark deleted [
+295 silly reify   'D:\\new_downloads\\websiteshubham\\node_modules\\lightningcss-darwin-arm64'
+295 silly reify ]
+296 verbose reify failed optional dependency D:\new_downloads\websiteshubham\node_modules\lightningcss-android-arm64
+297 silly reify mark deleted [
+297 silly reify   'D:\\new_downloads\\websiteshubham\\node_modules\\lightningcss-android-arm64'
+297 silly reify ]
+298 verbose reify failed optional dependency D:\new_downloads\websiteshubham\node_modules\@unrs\resolver-binding-win32-ia32-msvc
+299 silly reify mark deleted [
+299 silly reify   'D:\\new_downloads\\websiteshubham\\node_modules\\@unrs\\resolver-binding-win32-ia32-msvc'
+299 silly reify ]
+300 verbose reify failed optional dependency D:\new_downloads\websiteshubham\node_modules\@unrs\resolver-binding-win32-arm64-msvc
+301 silly reify mark deleted [
+301 silly reify   'D:\\new_downloads\\websiteshubham\\node_modules\\@unrs\\resolver-binding-win32-arm64-msvc'
+301 silly reify ]
+302 verbose reify failed optional dependency D:\new_downloads\websiteshubham\node_modules\@unrs\resolver-binding-wasm32-wasi
+303 silly reify mark deleted [
+303 silly reify   'D:\\new_downloads\\websiteshubham\\node_modules\\@unrs\\resolver-binding-wasm32-wasi'
+303 silly reify ]
+304 verbose reify failed optional dependency D:\new_downloads\websiteshubham\node_modules\@unrs\resolver-binding-wasm32-wasi\node_modules\@emnapi\core
+305 silly reify mark deleted [
+305 silly reify   'D:\\new_downloads\\websiteshubham\\node_modules\\@unrs\\resolver-binding-wasm32-wasi\\node_modules\\@emnapi\\core'
+305 silly reify ]
+306 verbose reify failed optional dependency D:\new_downloads\websiteshubham\node_modules\@unrs\resolver-binding-wasm32-wasi\node_modules\@emnapi\runtime
+307 silly reify mark deleted [
+307 silly reify   'D:\\new_downloads\\websiteshubham\\node_modules\\@unrs\\resolver-binding-wasm32-wasi\\node_modules\\@emnapi\\runtime'
+307 silly reify ]
+308 verbose reify failed optional dependency D:\new_downloads\websiteshubham\node_modules\@unrs\resolver-binding-wasm32-wasi\node_modules\@emnapi\wasi-threads
+309 silly reify mark deleted [
+309 silly reify   'D:\\new_downloads\\websiteshubham\\node_modules\\@unrs\\resolver-binding-wasm32-wasi\\node_modules\\@emnapi\\wasi-threads'
+309 silly reify ]
+310 verbose reify failed optional dependency D:\new_downloads\websiteshubham\node_modules\@unrs\resolver-binding-openharmony-arm64
+311 silly reify mark deleted [
+311 silly reify   'D:\\new_downloads\\websiteshubham\\node_modules\\@unrs\\resolver-binding-openharmony-arm64'
+311 silly reify ]
+312 verbose reify failed optional dependency D:\new_downloads\websiteshubham\node_modules\@unrs\resolver-binding-linux-x64-musl
+313 silly reify mark deleted [
+313 silly reify   'D:\\new_downloads\\websiteshubham\\node_modules\\@unrs\\resolver-binding-linux-x64-musl'
+313 silly reify ]
+314 verbose reify failed optional dependency D:\new_downloads\websiteshubham\node_modules\@unrs\resolver-binding-linux-x64-gnu
+315 silly reify mark deleted [
+315 silly reify   'D:\\new_downloads\\websiteshubham\\node_modules\\@unrs\\resolver-binding-linux-x64-gnu'
+315 silly reify ]
+316 verbose reify failed optional dependency D:\new_downloads\websiteshubham\node_modules\@unrs\resolver-binding-linux-s390x-gnu
+317 silly reify mark deleted [
+317 silly reify   'D:\\new_downloads\\websiteshubham\\node_modules\\@unrs\\resolver-binding-linux-s390x-gnu'
+317 silly reify ]
+318 verbose reify failed optional dependency D:\new_downloads\websiteshubham\node_modules\@unrs\resolver-binding-linux-riscv64-musl
+319 silly reify mark deleted [
+319 silly reify   'D:\\new_downloads\\websiteshubham\\node_modules\\@unrs\\resolver-binding-linux-riscv64-musl'
+319 silly reify ]
+320 verbose reify failed optional dependency D:\new_downloads\websiteshubham\node_modules\@unrs\resolver-binding-linux-riscv64-gnu
+321 silly reify mark deleted [
+321 silly reify   'D:\\new_downloads\\websiteshubham\\node_modules\\@unrs\\resolver-binding-linux-riscv64-gnu'
+321 silly reify ]
+322 verbose reify failed optional dependency D:\new_downloads\websiteshubham\node_modules\@unrs\resolver-binding-linux-ppc64-gnu
+323 silly reify mark deleted [
+323 silly reify   'D:\\new_downloads\\websiteshubham\\node_modules\\@unrs\\resolver-binding-linux-ppc64-gnu'
+323 silly reify ]
+324 verbose reify failed optional dependency D:\new_downloads\websiteshubham\node_modules\@unrs\resolver-binding-linux-loong64-musl
+325 silly reify mark deleted [
+325 silly reify   'D:\\new_downloads\\websiteshubham\\node_modules\\@unrs\\resolver-binding-linux-loong64-musl'
+325 silly reify ]
+326 verbose reify failed optional dependency D:\new_downloads\websiteshubham\node_modules\@unrs\resolver-binding-linux-loong64-gnu
+327 silly reify mark deleted [
+327 silly reify   'D:\\new_downloads\\websiteshubham\\node_modules\\@unrs\\resolver-binding-linux-loong64-gnu'
+327 silly reify ]
+328 verbose reify failed optional dependency D:\new_downloads\websiteshubham\node_modules\@unrs\resolver-binding-linux-arm64-musl
+329 silly reify mark deleted [
+329 silly reify   'D:\\new_downloads\\websiteshubham\\node_modules\\@unrs\\resolver-binding-linux-arm64-musl'
+329 silly reify ]
+330 verbose reify failed optional dependency D:\new_downloads\websiteshubham\node_modules\@unrs\resolver-binding-linux-arm64-gnu
+331 silly reify mark deleted [
+331 silly reify   'D:\\new_downloads\\websiteshubham\\node_modules\\@unrs\\resolver-binding-linux-arm64-gnu'
+331 silly reify ]
+332 verbose reify failed optional dependency D:\new_downloads\websiteshubham\node_modules\@unrs\resolver-binding-linux-arm-musleabihf
+333 silly reify mark deleted [
+333 silly reify   'D:\\new_downloads\\websiteshubham\\node_modules\\@unrs\\resolver-binding-linux-arm-musleabihf'
+333 silly reify ]
+334 verbose reify failed optional dependency D:\new_downloads\websiteshubham\node_modules\@unrs\resolver-binding-linux-arm-gnueabihf
+335 silly reify mark deleted [
+335 silly reify   'D:\\new_downloads\\websiteshubham\\node_modules\\@unrs\\resolver-binding-linux-arm-gnueabihf'
+335 silly reify ]
+336 verbose reify failed optional dependency D:\new_downloads\websiteshubham\node_modules\@unrs\resolver-binding-freebsd-x64
+337 silly reify mark deleted [
+337 silly reify   'D:\\new_downloads\\websiteshubham\\node_modules\\@unrs\\resolver-binding-freebsd-x64'
+337 silly reify ]
+338 verbose reify failed optional dependency D:\new_downloads\websiteshubham\node_modules\@unrs\resolver-binding-darwin-x64
+339 silly reify mark deleted [
+339 silly reify   'D:\\new_downloads\\websiteshubham\\node_modules\\@unrs\\resolver-binding-darwin-x64'
+339 silly reify ]
+340 verbose reify failed optional dependency D:\new_downloads\websiteshubham\node_modules\@unrs\resolver-binding-darwin-arm64
+341 silly reify mark deleted [
+341 silly reify   'D:\\new_downloads\\websiteshubham\\node_modules\\@unrs\\resolver-binding-darwin-arm64'
+341 silly reify ]
+342 verbose reify failed optional dependency D:\new_downloads\websiteshubham\node_modules\@unrs\resolver-binding-android-arm64
+343 silly reify mark deleted [
+343 silly reify   'D:\\new_downloads\\websiteshubham\\node_modules\\@unrs\\resolver-binding-android-arm64'
+343 silly reify ]
+344 verbose reify failed optional dependency D:\new_downloads\websiteshubham\node_modules\@unrs\resolver-binding-android-arm-eabi
+345 silly reify mark deleted [
+345 silly reify   'D:\\new_downloads\\websiteshubham\\node_modules\\@unrs\\resolver-binding-android-arm-eabi'
+345 silly reify ]
+346 verbose reify failed optional dependency D:\new_downloads\websiteshubham\node_modules\@tailwindcss\oxide-win32-arm64-msvc
+347 silly reify mark deleted [
+347 silly reify   'D:\\new_downloads\\websiteshubham\\node_modules\\@tailwindcss\\oxide-win32-arm64-msvc'
+347 silly reify ]
+348 verbose reify failed optional dependency D:\new_downloads\websiteshubham\node_modules\@tailwindcss\oxide-linux-x64-musl
+349 silly reify mark deleted [
+349 silly reify   'D:\\new_downloads\\websiteshubham\\node_modules\\@tailwindcss\\oxide-linux-x64-musl'
+349 silly reify ]
+350 verbose reify failed optional dependency D:\new_downloads\websiteshubham\node_modules\@tailwindcss\oxide-linux-x64-gnu
+351 silly reify mark deleted [
+351 silly reify   'D:\\new_downloads\\websiteshubham\\node_modules\\@tailwindcss\\oxide-linux-x64-gnu'
+351 silly reify ]
+352 verbose reify failed optional dependency D:\new_downloads\websiteshubham\node_modules\@tailwindcss\oxide-linux-arm64-musl
+353 silly reify mark deleted [
+353 silly reify   'D:\\new_downloads\\websiteshubham\\node_modules\\@tailwindcss\\oxide-linux-arm64-musl'
+353 silly reify ]
+354 verbose reify failed optional dependency D:\new_downloads\websiteshubham\node_modules\@tailwindcss\oxide-linux-arm64-gnu
+355 silly reify mark deleted [
+355 silly reify   'D:\\new_downloads\\websiteshubham\\node_modules\\@tailwindcss\\oxide-linux-arm64-gnu'
+355 silly reify ]
+356 verbose reify failed optional dependency D:\new_downloads\websiteshubham\node_modules\@tailwindcss\oxide-linux-arm-gnueabihf
+357 silly reify mark deleted [
+357 silly reify   'D:\\new_downloads\\websiteshubham\\node_modules\\@tailwindcss\\oxide-linux-arm-gnueabihf'
+357 silly reify ]
+358 verbose reify failed optional dependency D:\new_downloads\websiteshubham\node_modules\@tailwindcss\oxide-freebsd-x64
+359 silly reify mark deleted [
+359 silly reify   'D:\\new_downloads\\websiteshubham\\node_modules\\@tailwindcss\\oxide-freebsd-x64'
+359 silly reify ]
+360 verbose reify failed optional dependency D:\new_downloads\websiteshubham\node_modules\@tailwindcss\oxide-darwin-x64
+361 silly reify mark deleted [
+361 silly reify   'D:\\new_downloads\\websiteshubham\\node_modules\\@tailwindcss\\oxide-darwin-x64'
+361 silly reify ]
+362 verbose reify failed optional dependency D:\new_downloads\websiteshubham\node_modules\@tailwindcss\oxide-darwin-arm64
+363 silly reify mark deleted [
+363 silly reify   'D:\\new_downloads\\websiteshubham\\node_modules\\@tailwindcss\\oxide-darwin-arm64'
+363 silly reify ]
+364 verbose reify failed optional dependency D:\new_downloads\websiteshubham\node_modules\@tailwindcss\oxide-android-arm64
+365 silly reify mark deleted [
+365 silly reify   'D:\\new_downloads\\websiteshubham\\node_modules\\@tailwindcss\\oxide-android-arm64'
+365 silly reify ]
+366 verbose reify failed optional dependency D:\new_downloads\websiteshubham\node_modules\@next\swc-win32-arm64-msvc
+367 silly reify mark deleted [
+367 silly reify   'D:\\new_downloads\\websiteshubham\\node_modules\\@next\\swc-win32-arm64-msvc'
+367 silly reify ]
+368 verbose reify failed optional dependency D:\new_downloads\websiteshubham\node_modules\@next\swc-linux-x64-musl
+369 silly reify mark deleted [
+369 silly reify   'D:\\new_downloads\\websiteshubham\\node_modules\\@next\\swc-linux-x64-musl'
+369 silly reify ]
+370 verbose reify failed optional dependency D:\new_downloads\websiteshubham\node_modules\@next\swc-linux-x64-gnu
+371 silly reify mark deleted [
+371 silly reify   'D:\\new_downloads\\websiteshubham\\node_modules\\@next\\swc-linux-x64-gnu'
+371 silly reify ]
+372 verbose reify failed optional dependency D:\new_downloads\websiteshubham\node_modules\@next\swc-linux-arm64-musl
+373 silly reify mark deleted [
+373 silly reify   'D:\\new_downloads\\websiteshubham\\node_modules\\@next\\swc-linux-arm64-musl'
+373 silly reify ]
+374 verbose reify failed optional dependency D:\new_downloads\websiteshubham\node_modules\@next\swc-linux-arm64-gnu
+375 silly reify mark deleted [
+375 silly reify   'D:\\new_downloads\\websiteshubham\\node_modules\\@next\\swc-linux-arm64-gnu'
+375 silly reify ]
+376 verbose reify failed optional dependency D:\new_downloads\websiteshubham\node_modules\@next\swc-darwin-x64
+377 silly reify mark deleted [
+377 silly reify   'D:\\new_downloads\\websiteshubham\\node_modules\\@next\\swc-darwin-x64'
+377 silly reify ]
+378 verbose reify failed optional dependency D:\new_downloads\websiteshubham\node_modules\@next\swc-darwin-arm64
+379 silly reify mark deleted [
+379 silly reify   'D:\\new_downloads\\websiteshubham\\node_modules\\@next\\swc-darwin-arm64'
+379 silly reify ]
+380 verbose reify failed optional dependency D:\new_downloads\websiteshubham\node_modules\@img\sharp-win32-ia32
+381 silly reify mark deleted [
+381 silly reify   'D:\\new_downloads\\websiteshubham\\node_modules\\@img\\sharp-win32-ia32'
+381 silly reify ]
+382 verbose reify failed optional dependency D:\new_downloads\websiteshubham\node_modules\@img\sharp-win32-arm64
+383 silly reify mark deleted [
+383 silly reify   'D:\\new_downloads\\websiteshubham\\node_modules\\@img\\sharp-win32-arm64'
+383 silly reify ]
+384 verbose reify failed optional dependency D:\new_downloads\websiteshubham\node_modules\@img\sharp-wasm32
+385 silly reify mark deleted [
+385 silly reify   'D:\\new_downloads\\websiteshubham\\node_modules\\@img\\sharp-wasm32'
+385 silly reify ]
+386 verbose reify failed optional dependency D:\new_downloads\websiteshubham\node_modules\@img\sharp-linuxmusl-x64
+387 silly reify mark deleted [
+387 silly reify   'D:\\new_downloads\\websiteshubham\\node_modules\\@img\\sharp-linuxmusl-x64'
+387 silly reify ]
+388 verbose reify failed optional dependency D:\new_downloads\websiteshubham\node_modules\@img\sharp-linuxmusl-arm64
+389 silly reify mark deleted [
+389 silly reify   'D:\\new_downloads\\websiteshubham\\node_modules\\@img\\sharp-linuxmusl-arm64'
+389 silly reify ]
+390 verbose reify failed optional dependency D:\new_downloads\websiteshubham\node_modules\@img\sharp-linux-x64
+391 silly reify mark deleted [
+391 silly reify   'D:\\new_downloads\\websiteshubham\\node_modules\\@img\\sharp-linux-x64'
+391 silly reify ]
+392 verbose reify failed optional dependency D:\new_downloads\websiteshubham\node_modules\@img\sharp-linux-s390x
+393 silly reify mark deleted [
+393 silly reify   'D:\\new_downloads\\websiteshubham\\node_modules\\@img\\sharp-linux-s390x'
+393 silly reify ]
+394 verbose reify failed optional dependency D:\new_downloads\websiteshubham\node_modules\@img\sharp-linux-riscv64
+395 silly reify mark deleted [
+395 silly reify   'D:\\new_downloads\\websiteshubham\\node_modules\\@img\\sharp-linux-riscv64'
+395 silly reify ]
+396 verbose reify failed optional dependency D:\new_downloads\websiteshubham\node_modules\@img\sharp-linux-ppc64
+397 silly reify mark deleted [
+397 silly reify   'D:\\new_downloads\\websiteshubham\\node_modules\\@img\\sharp-linux-ppc64'
+397 silly reify ]
+398 verbose reify failed optional dependency D:\new_downloads\websiteshubham\node_modules\@img\sharp-linux-arm64
+399 silly reify mark deleted [
+399 silly reify   'D:\\new_downloads\\websiteshubham\\node_modules\\@img\\sharp-linux-arm64'
+399 silly reify ]
+400 verbose reify failed optional dependency D:\new_downloads\websiteshubham\node_modules\@img\sharp-linux-arm
+401 silly reify mark deleted [
+401 silly reify   'D:\\new_downloads\\websiteshubham\\node_modules\\@img\\sharp-linux-arm'
+401 silly reify ]
+402 verbose reify failed optional dependency D:\new_downloads\websiteshubham\node_modules\@img\sharp-libvips-linuxmusl-x64
+403 silly reify mark deleted [
+403 silly reify   'D:\\new_downloads\\websiteshubham\\node_modules\\@img\\sharp-libvips-linuxmusl-x64'
+403 silly reify ]
+404 verbose reify failed optional dependency D:\new_downloads\websiteshubham\node_modules\@img\sharp-libvips-linuxmusl-arm64
+405 silly reify mark deleted [
+405 silly reify   'D:\\new_downloads\\websiteshubham\\node_modules\\@img\\sharp-libvips-linuxmusl-arm64'
+405 silly reify ]
+406 verbose reify failed optional dependency D:\new_downloads\websiteshubham\node_modules\@img\sharp-libvips-linux-x64
+407 silly reify mark deleted [
+407 silly reify   'D:\\new_downloads\\websiteshubham\\node_modules\\@img\\sharp-libvips-linux-x64'
+407 silly reify ]
+408 verbose reify failed optional dependency D:\new_downloads\websiteshubham\node_modules\@img\sharp-libvips-linux-s390x
+409 silly reify mark deleted [
+409 silly reify   'D:\\new_downloads\\websiteshubham\\node_modules\\@img\\sharp-libvips-linux-s390x'
+409 silly reify ]
+410 verbose reify failed optional dependency D:\new_downloads\websiteshubham\node_modules\@img\sharp-libvips-linux-riscv64
+411 silly reify mark deleted [
+411 silly reify   'D:\\new_downloads\\websiteshubham\\node_modules\\@img\\sharp-libvips-linux-riscv64'
+411 silly reify ]
+412 verbose reify failed optional dependency D:\new_downloads\websiteshubham\node_modules\@img\sharp-libvips-linux-ppc64
+413 silly reify mark deleted [
+413 silly reify   'D:\\new_downloads\\websiteshubham\\node_modules\\@img\\sharp-libvips-linux-ppc64'
+413 silly reify ]
+414 verbose reify failed optional dependency D:\new_downloads\websiteshubham\node_modules\@img\sharp-libvips-linux-arm64
+415 silly reify mark deleted [
+415 silly reify   'D:\\new_downloads\\websiteshubham\\node_modules\\@img\\sharp-libvips-linux-arm64'
+415 silly reify ]
+416 verbose reify failed optional dependency D:\new_downloads\websiteshubham\node_modules\@img\sharp-libvips-linux-arm
+417 silly reify mark deleted [
+417 silly reify   'D:\\new_downloads\\websiteshubham\\node_modules\\@img\\sharp-libvips-linux-arm'
+417 silly reify ]
+418 verbose reify failed optional dependency D:\new_downloads\websiteshubham\node_modules\@img\sharp-libvips-darwin-x64
+419 silly reify mark deleted [
+419 silly reify   'D:\\new_downloads\\websiteshubham\\node_modules\\@img\\sharp-libvips-darwin-x64'
+419 silly reify ]
+420 verbose reify failed optional dependency D:\new_downloads\websiteshubham\node_modules\@img\sharp-libvips-darwin-arm64
+421 silly reify mark deleted [
+421 silly reify   'D:\\new_downloads\\websiteshubham\\node_modules\\@img\\sharp-libvips-darwin-arm64'
+421 silly reify ]
+422 verbose reify failed optional dependency D:\new_downloads\websiteshubham\node_modules\@img\sharp-darwin-x64
+423 silly reify mark deleted [
+423 silly reify   'D:\\new_downloads\\websiteshubham\\node_modules\\@img\\sharp-darwin-x64'
+423 silly reify ]
+424 verbose reify failed optional dependency D:\new_downloads\websiteshubham\node_modules\@img\sharp-darwin-arm64
+425 silly reify mark deleted [
+425 silly reify   'D:\\new_downloads\\websiteshubham\\node_modules\\@img\\sharp-darwin-arm64'
+425 silly reify ]
+426 http cache @prisma/get-platform@https://registry.npmjs.org/@prisma/get-platform/-/get-platform-6.19.3.tgz 0ms (cache hit)
+427 http cache @prisma/fetch-engine@https://registry.npmjs.org/@prisma/fetch-engine/-/fetch-engine-6.19.3.tgz 0ms (cache hit)
+428 http cache @prisma/engines@https://registry.npmjs.org/@prisma/engines/-/engines-6.19.3.tgz 0ms (cache hit)
+429 http cache nypm@https://registry.npmjs.org/nypm/-/nypm-0.6.6.tgz 0ms (cache hit)
+430 http cache tinyexec@https://registry.npmjs.org/tinyexec/-/tinyexec-1.2.4.tgz 0ms (cache hit)
+431 http cache citty@https://registry.npmjs.org/citty/-/citty-0.1.6.tgz 0ms (cache hit)
+432 silly tarball no local data for @prisma/get-platform@https://registry.npmjs.org/@prisma/get-platform/-/get-platform-6.19.3.tgz. Extracting by manifest.
+433 http cache node-fetch-native@https://registry.npmjs.org/node-fetch-native/-/node-fetch-native-1.6.7.tgz 0ms (cache hit)
+434 http cache consola@https://registry.npmjs.org/consola/-/consola-3.4.2.tgz 0ms (cache hit)
+435 http cache @prisma/engines-version@https://registry.npmjs.org/@prisma/engines-version/-/engines-version-7.1.1-3.c2990dca591cba766e3b7ef5d9e8a84796e47ab7.tgz 0ms (cache hit)
+436 silly tarball no local data for @prisma/fetch-engine@https://registry.npmjs.org/@prisma/fetch-engine/-/fetch-engine-6.19.3.tgz. Extracting by manifest.
+437 http cache @prisma/client@https://registry.npmjs.org/@prisma/client/-/client-6.19.3.tgz 0ms (cache hit)
+438 http cache readdirp@https://registry.npmjs.org/readdirp/-/readdirp-4.1.2.tgz 0ms (cache hit)
+439 http cache rc9@https://registry.npmjs.org/rc9/-/rc9-2.1.2.tgz 0ms (cache hit)
+440 silly tarball no local data for @prisma/engines@https://registry.npmjs.org/@prisma/engines/-/engines-6.19.3.tgz. Extracting by manifest.
+441 http cache @prisma/config@https://registry.npmjs.org/@prisma/config/-/config-6.19.3.tgz 0ms (cache hit)
+442 http cache @prisma/debug@https://registry.npmjs.org/@prisma/debug/-/debug-6.19.3.tgz 0ms (cache hit)
+443 http cache prisma@https://registry.npmjs.org/prisma/-/prisma-6.19.3.tgz 0ms (cache hit)
+444 http cache giget@https://registry.npmjs.org/giget/-/giget-2.0.0.tgz 0ms (cache hit)
+445 http cache perfect-debounce@https://registry.npmjs.org/perfect-debounce/-/perfect-debounce-1.0.0.tgz 0ms (cache hit)
+446 http cache citty@https://registry.npmjs.org/citty/-/citty-0.2.2.tgz 0ms (cache hit)
+447 http cache @emnapi/wasi-threads@https://registry.npmjs.org/@emnapi/wasi-threads/-/wasi-threads-1.2.1.tgz 0ms (cache hit)
+448 http cache effect@https://registry.npmjs.org/effect/-/effect-3.21.0.tgz 0ms (cache hit)
+449 http cache chokidar@https://registry.npmjs.org/chokidar/-/chokidar-4.0.3.tgz 0ms (cache hit)
+450 http cache c12@https://registry.npmjs.org/c12/-/c12-3.1.0.tgz 0ms (cache hit)
+451 http cache @emnapi/runtime@https://registry.npmjs.org/@emnapi/runtime/-/runtime-1.10.0.tgz 0ms (cache hit)
+452 http cache @emnapi/core@https://registry.npmjs.org/@emnapi/core/-/core-1.10.0.tgz 0ms (cache hit)
+453 http cache dotenv@https://registry.npmjs.org/dotenv/-/dotenv-16.6.1.tgz 0ms (cache hit)
+454 silly tarball no local data for nypm@https://registry.npmjs.org/nypm/-/nypm-0.6.6.tgz. Extracting by manifest.
+455 silly tarball no local data for tinyexec@https://registry.npmjs.org/tinyexec/-/tinyexec-1.2.4.tgz. Extracting by manifest.
+456 silly tarball no local data for citty@https://registry.npmjs.org/citty/-/citty-0.1.6.tgz. Extracting by manifest.
+457 silly tarball no local data for node-fetch-native@https://registry.npmjs.org/node-fetch-native/-/node-fetch-native-1.6.7.tgz. Extracting by manifest.
+458 silly tarball no local data for consola@https://registry.npmjs.org/consola/-/consola-3.4.2.tgz. Extracting by manifest.
+459 silly tarball no local data for @prisma/engines-version@https://registry.npmjs.org/@prisma/engines-version/-/engines-version-7.1.1-3.c2990dca591cba766e3b7ef5d9e8a84796e47ab7.tgz. Extracting by manifest.
+460 silly tarball no local data for @prisma/client@https://registry.npmjs.org/@prisma/client/-/client-6.19.3.tgz. Extracting by manifest.
+461 silly tarball no local data for readdirp@https://registry.npmjs.org/readdirp/-/readdirp-4.1.2.tgz. Extracting by manifest.
+462 silly tarball no local data for rc9@https://registry.npmjs.org/rc9/-/rc9-2.1.2.tgz. Extracting by manifest.
+463 silly tarball no local data for @prisma/config@https://registry.npmjs.org/@prisma/config/-/config-6.19.3.tgz. Extracting by manifest.
+464 silly tarball no local data for @prisma/debug@https://registry.npmjs.org/@prisma/debug/-/debug-6.19.3.tgz. Extracting by manifest.
+465 silly tarball no local data for prisma@https://registry.npmjs.org/prisma/-/prisma-6.19.3.tgz. Extracting by manifest.
+466 silly tarball no local data for giget@https://registry.npmjs.org/giget/-/giget-2.0.0.tgz. Extracting by manifest.
+467 silly tarball no local data for perfect-debounce@https://registry.npmjs.org/perfect-debounce/-/perfect-debounce-1.0.0.tgz. Extracting by manifest.
+468 silly tarball no local data for citty@https://registry.npmjs.org/citty/-/citty-0.2.2.tgz. Extracting by manifest.
+469 silly tarball no local data for effect@https://registry.npmjs.org/effect/-/effect-3.21.0.tgz. Extracting by manifest.
+470 silly tarball no local data for chokidar@https://registry.npmjs.org/chokidar/-/chokidar-4.0.3.tgz. Extracting by manifest.
+471 silly tarball no local data for c12@https://registry.npmjs.org/c12/-/c12-3.1.0.tgz. Extracting by manifest.
+472 silly tarball no local data for dotenv@https://registry.npmjs.org/dotenv/-/dotenv-16.6.1.tgz. Extracting by manifest.
+473 http fetch GET 200 https://registry.npmjs.org/tinyexec/-/tinyexec-1.2.4.tgz 155ms (cache miss)
+474 http fetch GET 200 https://registry.npmjs.org/nypm/-/nypm-0.6.6.tgz 199ms (cache miss)
+475 http fetch GET 200 https://registry.npmjs.org/citty/-/citty-0.1.6.tgz 207ms (cache miss)
+476 http fetch GET 200 https://registry.npmjs.org/perfect-debounce/-/perfect-debounce-1.0.0.tgz 203ms (cache miss)
+477 http fetch GET 200 https://registry.npmjs.org/citty/-/citty-0.2.2.tgz 248ms (cache miss)
+478 http fetch POST 200 https://registry.npmjs.org/-/npm/v1/security/advisories/bulk 312ms
+479 silly audit report {
+479 silly audit report   postcss: [
+479 silly audit report     {
+479 silly audit report       id: 1117015,
+479 silly audit report       url: 'https://github.com/advisories/GHSA-qx2v-qp2m-jg93',
+479 silly audit report       title: 'PostCSS has XSS via Unescaped </style> in its CSS Stringify Output',
+479 silly audit report       severity: 'moderate',
+479 silly audit report       vulnerable_versions: '<8.5.10',
+479 silly audit report       cwe: [Array],
+479 silly audit report       cvss: [Object]
+479 silly audit report     }
+479 silly audit report   ]
+479 silly audit report }
+480 silly packumentCache corgi:https://registry.npmjs.org/postcss cache-miss
+481 http fetch GET 200 https://registry.npmjs.org/@prisma/engines/-/engines-6.19.3.tgz 295ms (cache miss)
+482 http fetch GET 200 https://registry.npmjs.org/readdirp/-/readdirp-4.1.2.tgz 335ms (cache miss)
+483 http fetch GET 200 https://registry.npmjs.org/giget/-/giget-2.0.0.tgz 335ms (cache miss)
+484 http fetch GET 200 https://registry.npmjs.org/rc9/-/rc9-2.1.2.tgz 341ms (cache miss)
+485 http fetch GET 200 https://registry.npmjs.org/@prisma/config/-/config-6.19.3.tgz 344ms (cache miss)
+486 http fetch GET 200 https://registry.npmjs.org/c12/-/c12-3.1.0.tgz 346ms (cache miss)
+487 http fetch GET 200 https://registry.npmjs.org/dotenv/-/dotenv-16.6.1.tgz 370ms (cache miss)
+488 http fetch GET 200 https://registry.npmjs.org/chokidar/-/chokidar-4.0.3.tgz 394ms (cache miss)
+489 http fetch GET 200 https://registry.npmjs.org/@prisma/engines-version/-/engines-version-7.1.1-3.c2990dca591cba766e3b7ef5d9e8a84796e47ab7.tgz 419ms (cache miss)
+490 http fetch GET 200 https://registry.npmjs.org/postcss 198ms (cache revalidated)
+491 silly packumentCache corgi:https://registry.npmjs.org/postcss set size:344717 disposed:false
+492 silly packumentCache corgi:https://registry.npmjs.org/next cache-miss
+493 http fetch GET 200 https://registry.npmjs.org/@prisma/debug/-/debug-6.19.3.tgz 547ms (cache miss)
+494 http fetch GET 200 https://registry.npmjs.org/node-fetch-native/-/node-fetch-native-1.6.7.tgz 612ms (cache miss)
+495 http fetch GET 200 https://registry.npmjs.org/next 176ms (cache revalidated)
+496 silly packumentCache corgi:https://registry.npmjs.org/next set size:25178033 disposed:false
+497 http fetch GET 200 https://registry.npmjs.org/consola/-/consola-3.4.2.tgz 1012ms (cache miss)
+498 http fetch GET 200 https://registry.npmjs.org/@prisma/fetch-engine/-/fetch-engine-6.19.3.tgz 1127ms (cache miss)
+499 http fetch GET 200 https://registry.npmjs.org/@prisma/get-platform/-/get-platform-6.19.3.tgz 1226ms (cache miss)
+500 http fetch GET 200 https://registry.npmjs.org/prisma/-/prisma-6.19.3.tgz 2733ms (cache miss)
+501 http fetch GET 200 https://registry.npmjs.org/@prisma/client/-/client-6.19.3.tgz 2748ms (cache miss)
+502 http fetch GET 200 https://registry.npmjs.org/effect/-/effect-3.21.0.tgz 8286ms (cache miss)
+503 info run prisma@6.19.3 preinstall node_modules/prisma node scripts/preinstall-entry.js
+504 info run prisma@6.19.3 preinstall { code: 0, signal: null }
+505 info run @prisma/client@6.19.3 postinstall node_modules/@prisma/client node scripts/postinstall.js
+506 info run @prisma/engines@6.19.3 postinstall node_modules/@prisma/engines node scripts/postinstall.js
+507 info run @prisma/engines@6.19.3 postinstall { code: 0, signal: null }
+508 info run @prisma/client@6.19.3 postinstall { code: 0, signal: null }
+509 silly ADD node_modules/tinyexec
+510 silly ADD node_modules/nypm
+511 silly ADD node_modules/nypm/node_modules/citty
+512 silly ADD node_modules/node-fetch-native
+513 silly ADD node_modules/consola
+514 silly ADD node_modules/citty
+515 silly ADD node_modules/lightningcss-win32-arm64-msvc
+516 silly ADD node_modules/lightningcss-linux-x64-musl
+517 silly ADD node_modules/lightningcss-linux-x64-gnu
+518 silly ADD node_modules/lightningcss-linux-arm64-musl
+519 silly ADD node_modules/lightningcss-linux-arm64-gnu
+520 silly ADD node_modules/lightningcss-linux-arm-gnueabihf
+521 silly ADD node_modules/lightningcss-freebsd-x64
+522 silly ADD node_modules/lightningcss-darwin-x64
+523 silly ADD node_modules/lightningcss-darwin-arm64
+524 silly ADD node_modules/lightningcss-android-arm64
+525 silly ADD node_modules/@unrs/resolver-binding-win32-ia32-msvc
+526 silly ADD node_modules/@unrs/resolver-binding-win32-arm64-msvc
+527 silly ADD node_modules/@unrs/resolver-binding-wasm32-wasi
+528 silly ADD node_modules/@unrs/resolver-binding-wasm32-wasi/node_modules/@emnapi/wasi-threads
+529 silly ADD node_modules/@unrs/resolver-binding-wasm32-wasi/node_modules/@emnapi/runtime
+530 silly ADD node_modules/@unrs/resolver-binding-wasm32-wasi/node_modules/@emnapi/core
+531 silly ADD node_modules/@unrs/resolver-binding-openharmony-arm64
+532 silly ADD node_modules/@unrs/resolver-binding-linux-x64-musl
+533 silly ADD node_modules/@unrs/resolver-binding-linux-x64-gnu
+534 silly ADD node_modules/@unrs/resolver-binding-linux-s390x-gnu
+535 silly ADD node_modules/@unrs/resolver-binding-linux-riscv64-musl
+536 silly ADD node_modules/@unrs/resolver-binding-linux-riscv64-gnu
+537 silly ADD node_modules/@unrs/resolver-binding-linux-ppc64-gnu
+538 silly ADD node_modules/@unrs/resolver-binding-linux-loong64-musl
+539 silly ADD node_modules/@unrs/resolver-binding-linux-loong64-gnu
+540 silly ADD node_modules/@unrs/resolver-binding-linux-arm64-musl
+541 silly ADD node_modules/@unrs/resolver-binding-linux-arm64-gnu
+542 silly ADD node_modules/@unrs/resolver-binding-linux-arm-musleabihf
+543 silly ADD node_modules/@unrs/resolver-binding-linux-arm-gnueabihf
+544 silly ADD node_modules/@unrs/resolver-binding-freebsd-x64
+545 silly ADD node_modules/@unrs/resolver-binding-darwin-x64
+546 silly ADD node_modules/@unrs/resolver-binding-darwin-arm64
+547 silly ADD node_modules/@unrs/resolver-binding-android-arm64
+548 silly ADD node_modules/@unrs/resolver-binding-android-arm-eabi
+549 silly ADD node_modules/@tailwindcss/oxide-win32-arm64-msvc
+550 silly ADD node_modules/@tailwindcss/oxide-wasm32-wasi
+551 silly ADD node_modules/@tailwindcss/oxide-linux-x64-musl
+552 silly ADD node_modules/@tailwindcss/oxide-linux-x64-gnu
+553 silly ADD node_modules/@tailwindcss/oxide-linux-arm64-musl
+554 silly ADD node_modules/@tailwindcss/oxide-linux-arm64-gnu
+555 silly ADD node_modules/@tailwindcss/oxide-linux-arm-gnueabihf
+556 silly ADD node_modules/@tailwindcss/oxide-freebsd-x64
+557 silly ADD node_modules/@tailwindcss/oxide-darwin-x64
+558 silly ADD node_modules/@tailwindcss/oxide-darwin-arm64
+559 silly ADD node_modules/@tailwindcss/oxide-android-arm64
+560 silly ADD node_modules/@next/swc-win32-arm64-msvc
+561 silly ADD node_modules/@next/swc-linux-x64-musl
+562 silly ADD node_modules/@next/swc-linux-x64-gnu
+563 silly ADD node_modules/@next/swc-linux-arm64-musl
+564 silly ADD node_modules/@next/swc-linux-arm64-gnu
+565 silly ADD node_modules/@next/swc-darwin-x64
+566 silly ADD node_modules/@next/swc-darwin-arm64
+567 silly ADD node_modules/@img/sharp-win32-ia32
+568 silly ADD node_modules/@img/sharp-win32-arm64
+569 silly ADD node_modules/@img/sharp-wasm32
+570 silly ADD node_modules/@img/sharp-linuxmusl-x64
+571 silly ADD node_modules/@img/sharp-linuxmusl-arm64
+572 silly ADD node_modules/@img/sharp-linux-x64
+573 silly ADD node_modules/@img/sharp-linux-s390x
+574 silly ADD node_modules/@img/sharp-linux-riscv64
+575 silly ADD node_modules/@img/sharp-linux-ppc64
+576 silly ADD node_modules/@img/sharp-linux-arm64
+577 silly ADD node_modules/@img/sharp-linux-arm
+578 silly ADD node_modules/@img/sharp-libvips-linuxmusl-x64
+579 silly ADD node_modules/@img/sharp-libvips-linuxmusl-arm64
+580 silly ADD node_modules/@img/sharp-libvips-linux-x64
+581 silly ADD node_modules/@img/sharp-libvips-linux-s390x
+582 silly ADD node_modules/@img/sharp-libvips-linux-riscv64
+583 silly ADD node_modules/@img/sharp-libvips-linux-ppc64
+584 silly ADD node_modules/@img/sharp-libvips-linux-arm64
+585 silly ADD node_modules/@img/sharp-libvips-linux-arm
+586 silly ADD node_modules/@img/sharp-libvips-darwin-x64
+587 silly ADD node_modules/@img/sharp-libvips-darwin-arm64
+588 silly ADD node_modules/@img/sharp-darwin-x64
+589 silly ADD node_modules/@img/sharp-darwin-arm64
+590 silly ADD node_modules/@emnapi/wasi-threads
+591 silly REMOVE node_modules/@radix-ui/react-use-layout-effect
+592 silly REMOVE node_modules/@radix-ui/react-use-effect-event
+593 silly REMOVE node_modules/@radix-ui/primitive
+594 silly REMOVE node_modules/@radix-ui/react-slot
+595 silly REMOVE node_modules/@radix-ui/react-primitive
+596 silly REMOVE node_modules/@radix-ui/react-toggle
+597 silly REMOVE node_modules/@radix-ui/react-compose-refs
+598 silly REMOVE node_modules/@radix-ui/react-use-controllable-state
+599 silly REMOVE node_modules/@prisma/query-plan-executor
+600 silly CHANGE node_modules/@prisma/get-platform
+601 silly REMOVE node_modules/@prisma/get-platform/node_modules/@prisma/debug
+602 silly REMOVE node_modules/@prisma/studio-core
+603 silly REMOVE node_modules/@prisma/client-runtime-utils
+604 silly REMOVE node_modules/@prisma/streams-local
+605 silly REMOVE node_modules/@prisma/streams-local/node_modules/json-schema-traverse
+606 silly REMOVE node_modules/@prisma/streams-local/node_modules/ajv
+607 silly REMOVE node_modules/@prisma/dev
+608 silly CHANGE node_modules/@prisma/client
+609 silly CHANGE node_modules/@prisma/fetch-engine
+610 silly REMOVE node_modules/@prisma/fetch-engine/node_modules/@prisma/get-platform
+611 silly CHANGE node_modules/@prisma/engines
+612 silly REMOVE node_modules/@prisma/engines/node_modules/@prisma/get-platform
+613 silly CHANGE node_modules/@prisma/engines-version
+614 silly CHANGE node_modules/@prisma/config
+615 silly CHANGE node_modules/@prisma/debug
+616 silly REMOVE node_modules/@kurkle/color
+617 silly REMOVE node_modules/@hono/node-server
+618 silly REMOVE node_modules/@electric-sql/pglite-tools
+619 silly REMOVE node_modules/@electric-sql/pglite-socket
+620 silly REMOVE node_modules/@electric-sql/pglite
+621 silly REMOVE node_modules/zeptomatch
+622 silly REMOVE node_modules/valibot
+623 silly REMOVE node_modules/sqlstring
+624 silly REMOVE node_modules/signal-exit
+625 silly REMOVE node_modules/std-env
+626 silly REMOVE node_modules/seq-queue
+627 silly REMOVE node_modules/safer-buffer
+628 silly REMOVE node_modules/remeda
+629 silly REMOVE node_modules/retry
+630 silly CHANGE node_modules/readdirp
+631 silly REMOVE node_modules/require-from-string
+632 silly CHANGE node_modules/rc9
+633 silly CHANGE node_modules/prisma
+634 silly REMOVE node_modules/proper-lockfile
+635 silly REMOVE node_modules/proper-lockfile/node_modules/signal-exit
+636 silly REMOVE node_modules/postgres
+637 silly CHANGE node_modules/perfect-debounce
+638 silly REMOVE node_modules/named-placeholders
+639 silly REMOVE node_modules/mysql2
+640 silly REMOVE node_modules/long
+641 silly REMOVE node_modules/lru.min
+642 silly REMOVE node_modules/is-property
+643 silly REMOVE node_modules/hono
+644 silly REMOVE node_modules/iconv-lite
+645 silly REMOVE node_modules/http-status-codes
+646 silly REMOVE node_modules/grammex
+647 silly REMOVE node_modules/graphmatch
+648 silly CHANGE node_modules/giget
+649 silly REMOVE node_modules/get-port-please
+650 silly REMOVE node_modules/generate-function
+651 silly REMOVE node_modules/foreground-child
+652 silly REMOVE node_modules/fast-uri
+653 silly REMOVE node_modules/env-paths
+654 silly CHANGE node_modules/effect
+655 silly CHANGE node_modules/dotenv
+656 silly REMOVE node_modules/denque
+657 silly CHANGE node_modules/chokidar
+658 silly REMOVE node_modules/chart.js
+659 silly REMOVE node_modules/better-result
+660 silly CHANGE node_modules/c12
+661 silly REMOVE node_modules/aws-ssl-profiles
+662 verbose cwd D:\new_downloads\websiteshubham
+663 verbose os Windows_NT 10.0.22631
+664 verbose node v24.11.0
+665 verbose npm  v11.6.1
+666 verbose exit 0
+667 info ok
