@@ -158,7 +158,7 @@ The JSON shape must be:
     "requiredSkills": string[],
     "benefits": string[],
     "selectionProcess": string,
-    "howToApply": string,
+    "howToApply": string (Maximum 1-2 sentences. Just mention that eligible candidates can click the link below to apply. Do NOT generate generic lists of steps like "Click the link and fill the form"),
     "faq": [{"question": string, "answer": string}]
   }
 }
