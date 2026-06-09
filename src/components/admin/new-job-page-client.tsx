@@ -48,6 +48,7 @@ function draftToJobShape(draft: AiDraft): Partial<Job> {
     salary: draft.salary,
     deadline: draft.deadline,
     applyUrl: draft.applyUrl || "",
+    featuredImage: draft.featuredImage || null,
     seoTitle: draft.seoTitle,
     metaDescription: draft.metaDescription,
     excerpt: s.jobSummary || "",

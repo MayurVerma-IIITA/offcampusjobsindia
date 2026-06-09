@@ -18,6 +18,7 @@ export type AiDraft = {
   seoTitle: string;
   metaDescription: string;
   slug: string;
+  featuredImage?: string | null;
   sections: {
     jobSummary: string;
     overview: string;

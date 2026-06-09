@@ -19,6 +19,7 @@ const generatedJobSchema = z.object({
   seoTitle: z.string(),
   metaDescription: z.string(),
   slug: z.string(),
+  featuredImage: z.string().nullable().optional(),
   sections: z.object({
     jobSummary: z.string(),
     overview: z.string(),
@@ -134,6 +135,7 @@ The JSON shape must be:
   "seoTitle": string,
   "metaDescription": string,
   "slug": string,
+  "featuredImage": "string | null (If you know the company's official website domain e.g. google.com, return https://logo.clearbit.com/DOMAIN_NAME?size=800)",
   "sections": {
     "jobSummary": string,
     "overview": string,
