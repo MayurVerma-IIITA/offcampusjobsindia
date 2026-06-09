@@ -5,6 +5,7 @@ import { Card, CardContent, CardHeader, CardTitle } from "@/components/ui/card";
 import { formatDate } from "@/lib/utils";
 import type { Job } from "@/lib/types";
 import { getTransformedImageUrls } from "@/lib/supabase";
+import { ImageFallback } from "@/components/ui/image-fallback";
 
 export function JobCard({ job }: { job: Job }) {
   const imageUrls = job.featuredImage ? getTransformedImageUrls(job.featuredImage) : null;
@@ -13,14 +14,10 @@ export function JobCard({ job }: { job: Job }) {
     <Card className="h-full overflow-hidden transition-colors hover:border-primary/40 flex flex-col">
       {imageUrls ? (
         <Link href={`/jobs/${job.slug}`} className="block aspect-video w-full overflow-hidden">
-          <img
+          <ImageFallback
             src={imageUrls.medium || imageUrls.original}
             alt={job.title}
-            loading="lazy"
             className="h-full w-full object-cover transition-transform hover:scale-105"
-            onError={(e) => {
-              e.currentTarget.parentElement!.style.display = "none";
-            }}
           />
         </Link>
       ) : null}

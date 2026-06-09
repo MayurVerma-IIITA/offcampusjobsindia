@@ -12,7 +12,6 @@ import {
 } from "lucide-react";
 import { deleteJobAction, expireJobsAction } from "@/app/admin/actions";
 import { StatusDropdown } from "@/components/admin/status-dropdown";
-import { Badge } from "@/components/ui/badge";
 import { Card, CardContent, CardHeader, CardTitle } from "@/components/ui/card";
 import { getAnalyticsSummary } from "@/lib/analytics";
 import { requireUser } from "@/lib/auth";

@@ -99,14 +99,10 @@ export default async function JobDetailPage({
 
         {imageUrls && (
           <div className="mb-8 aspect-[16/9] w-full overflow-hidden rounded-xl border bg-muted">
-            <img
+            <ImageFallback
               src={imageUrls.large || imageUrls.original}
               alt={job.title}
               className="h-full w-full object-cover"
-              decoding="async"
-              onError={(e) => {
-                e.currentTarget.parentElement!.style.display = "none";
-              }}
             />
           </div>
         )}

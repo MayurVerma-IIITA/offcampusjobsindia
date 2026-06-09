@@ -5,7 +5,6 @@ import { JobCard } from "@/components/site/job-card";
 import { Pagination } from "@/components/site/pagination";
 import { SearchBox } from "@/components/site/search-box";
 import { TelegramCta } from "@/components/site/telegram-cta";
-import { Badge } from "@/components/ui/badge";
 import { getPaginatedJobs } from "@/lib/jobs";
 import type { JobFilters } from "@/lib/types";
 
