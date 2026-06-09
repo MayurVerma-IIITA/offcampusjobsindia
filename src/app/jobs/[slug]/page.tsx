@@ -68,7 +68,6 @@ export default async function JobDetailPage({
     notFound();
   }
 
-  const session = await getSession();
   const related = await getRelatedJobs(job);
   const isExpired = Boolean(job.deadline && new Date(job.deadline) < new Date());
   const imageUrls = job.featuredImage ? getTransformedImageUrls(job.featuredImage) : null;
@@ -81,15 +80,6 @@ export default async function JobDetailPage({
             <ArrowLeft aria-hidden="true" className="h-4 w-4" />
             Back to jobs
           </Link>
-          {session && (
-            <Link
-              href={`/admin/jobs/${job.id}`}
-              className={buttonVariants({ variant: "outline", size: "sm" })}
-            >
-              <Pencil className="mr-2 h-3.5 w-3.5" />
-              Edit Job
-            </Link>
-          )}
         </div>
         <Breadcrumbs
           items={[
