@@ -13,6 +13,7 @@ import { getJobBySlug, getRelatedJobs } from "@/lib/jobs";
 import { formatDate } from "@/lib/utils";
 import { absoluteUrl, jobPostingJsonLd } from "@/lib/seo";
 import { getTransformedImageUrls } from "@/lib/supabase";
+import { ImageFallback } from "@/components/ui/image-fallback";
 
 export const revalidate = 900;
 
