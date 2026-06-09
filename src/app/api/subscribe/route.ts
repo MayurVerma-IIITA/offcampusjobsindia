@@ -24,5 +24,9 @@ export async function POST(request: Request) {
     });
   }
 
+  if (request.headers.get("accept")?.includes("application/json")) {
+    return NextResponse.json({ success: true });
+  }
+
   return NextResponse.redirect(new URL("/?subscribed=1", request.url), 303);
 }

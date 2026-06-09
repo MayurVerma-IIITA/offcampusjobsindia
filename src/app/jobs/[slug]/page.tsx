@@ -104,6 +104,9 @@ export default async function JobDetailPage({
               alt={job.title}
               className="h-full w-full object-cover"
               decoding="async"
+              onError={(e) => {
+                e.currentTarget.parentElement!.style.display = "none";
+              }}
             />
           </div>
         )}

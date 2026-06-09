@@ -18,6 +18,9 @@ export function JobCard({ job }: { job: Job }) {
             alt={job.title}
             loading="lazy"
             className="h-full w-full object-cover transition-transform hover:scale-105"
+            onError={(e) => {
+              e.currentTarget.parentElement!.style.display = "none";
+            }}
           />
         </Link>
       ) : null}
