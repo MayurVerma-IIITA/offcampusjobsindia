@@ -127,7 +127,7 @@ The JSON shape must be:
   "title": string,
   "company": string,
   "location": string,
-  "qualifications": string[],
+  "qualifications": string[] (Only extract standard, short academic degrees like B.Tech, BCA, MCA, MBA. Do not include full sentences or soft skills),
   "batches": string[],
   "salary": string | null,
   "deadline": string | null,
