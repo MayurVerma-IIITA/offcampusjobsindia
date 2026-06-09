@@ -30,7 +30,7 @@ export function JobForm({
     salary: job?.salary || d.salary || "",
     deadline: job?.deadline?.slice(0, 10) || d.deadline?.slice(0, 10) || "",
     applyUrl: job?.applyUrl || d.applyUrl || "",
-    featuredImage: "",
+    featuredImage: job?.featuredImage || d.featuredImage || "",
     seoTitle: job?.seoTitle || d.seoTitle || "",
     metaDescription: job?.metaDescription || d.metaDescription || "",
     excerpt: job?.excerpt || d.excerpt || "",
