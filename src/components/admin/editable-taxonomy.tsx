@@ -18,7 +18,6 @@ export function EditableTaxonomy({ item, type }: { item: { name: string; slug: s
 
   return (
     <Badge
-      variant="outline"
       className="cursor-pointer hover:bg-primary hover:text-primary-foreground"
       onClick={handleClick}
       title="Click to rename"
