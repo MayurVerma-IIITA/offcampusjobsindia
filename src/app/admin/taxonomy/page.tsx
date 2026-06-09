@@ -6,6 +6,8 @@ import { Input } from "@/components/ui/input";
 import { requireUser } from "@/lib/auth";
 import { getTaxonomies } from "@/lib/jobs";
 
+import { EditableTaxonomy } from "@/components/admin/editable-taxonomy";
+
 export default async function TaxonomyPage() {
   await requireUser();
   const taxonomies = await getTaxonomies();
@@ -17,6 +19,9 @@ export default async function TaxonomyPage() {
         <p className="mt-2 text-muted-foreground">
           Manage companies, categories, qualifications, batches, and locations.
         </p>
+        <p className="mt-2 text-sm text-primary">
+          💡 Tip: Click on any tag below to rename it. Renaming a tag automatically updates all jobs connected to it!
+        </p>
         <div className="mt-8 grid gap-4 md:grid-cols-2">
           {Object.entries(taxonomies).map(([name, items]) => (
             <Card key={name}>
@@ -25,13 +30,7 @@ export default async function TaxonomyPage() {
               </CardHeader>
               <CardContent className="flex flex-wrap gap-2">
                 {items.map((item) => (
-                  <Link
-                    key={item.slug}
-                    href={`/jobs?q=${item.name}`}
-                    className="rounded-md border px-2 py-1 text-sm"
-                  >
-                    {item.name}
-                  </Link>
+                  <EditableTaxonomy key={item.slug} item={item} type={name} />
                 ))}
               </CardContent>
             </Card>

@@ -421,3 +421,35 @@ export async function createTaxonomyAction(formData: FormData) {
   revalidatePath("/jobs");
   redirect("/admin/taxonomy?saved=1");
 }
+
+export async function renameTaxonomyAction(formData: FormData) {
+  await requireUser();
+  const prisma = requireDb();
+  const type = text(formData, "type");
+  const oldSlug = text(formData, "oldSlug");
+  const newName = text(formData, "newName");
+
+  if (!newName || !oldSlug) return;
+
+  const newSlug = slugify(newName);
+
+  try {
+    if (type === "companies") {
+      await prisma.company.update({ where: { slug: oldSlug }, data: { name: newName, slug: newSlug } });
+    } else if (type === "categories") {
+      await prisma.category.update({ where: { slug: oldSlug }, data: { name: newName, slug: newSlug } });
+    } else if (type === "locations") {
+      await prisma.location.update({ where: { slug: oldSlug }, data: { name: newName, slug: newSlug } });
+    } else if (type === "qualifications") {
+      await prisma.qualification.update({ where: { slug: oldSlug }, data: { name: newName, slug: newSlug } });
+    } else if (type === "batches") {
+      await prisma.batch.update({ where: { slug: oldSlug }, data: { year: newName, slug: newSlug } });
+    }
+  } catch (e) {
+    // If slug collision, ignore or handle gracefully
+    console.error(e);
+  }
+
+  revalidatePath("/admin/taxonomy");
+  revalidatePath("/jobs");
+}
