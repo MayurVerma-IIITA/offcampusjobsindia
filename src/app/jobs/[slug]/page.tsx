@@ -2,13 +2,14 @@ import type { Metadata } from "next";
 import Link from "next/link";
 import Markdown from "react-markdown";
 import { notFound } from "next/navigation";
-import { ArrowLeft, ExternalLink } from "lucide-react";
+import { ArrowLeft, ExternalLink, Pencil } from "lucide-react";
 import { AdSlot } from "@/components/site/ad-slot";
 import { Breadcrumbs } from "@/components/site/breadcrumbs";
 import { JobCard } from "@/components/site/job-card";
 import { TelegramCta } from "@/components/site/telegram-cta";
 import { Badge } from "@/components/ui/badge";
 import { buttonVariants } from "@/components/ui/button";
+import { getSession } from "@/lib/auth";
 import { getJobBySlug, getRelatedJobs } from "@/lib/jobs";
 import { formatDate } from "@/lib/utils";
 import { absoluteUrl, jobPostingJsonLd } from "@/lib/seo";
@@ -67,6 +68,7 @@ export default async function JobDetailPage({
     notFound();
   }
 
+  const session = await getSession();
   const related = await getRelatedJobs(job);
   const isExpired = Boolean(job.deadline && new Date(job.deadline) < new Date());
   const imageUrls = job.featuredImage ? getTransformedImageUrls(job.featuredImage) : null;
@@ -74,10 +76,21 @@ export default async function JobDetailPage({
   return (
     <main className="mx-auto grid max-w-7xl gap-8 px-4 py-10 lg:grid-cols-[minmax(0,1fr)_320px]">
       <article className="min-w-0">
-        <Link href="/jobs" className="mb-6 inline-flex items-center gap-2 text-sm">
-          <ArrowLeft aria-hidden="true" className="h-4 w-4" />
-          Back to jobs
-        </Link>
+        <div className="mb-6 flex items-center justify-between gap-4">
+          <Link href="/jobs" className="inline-flex items-center gap-2 text-sm">
+            <ArrowLeft aria-hidden="true" className="h-4 w-4" />
+            Back to jobs
+          </Link>
+          {session && (
+            <Link
+              href={`/admin/jobs/${job.id}`}
+              className={buttonVariants({ variant: "outline", size: "sm" })}
+            >
+              <Pencil className="mr-2 h-3.5 w-3.5" />
+              Edit Job
+            </Link>
+          )}
+        </div>
         <Breadcrumbs
           items={[
             { label: "Jobs", href: "/jobs" },
