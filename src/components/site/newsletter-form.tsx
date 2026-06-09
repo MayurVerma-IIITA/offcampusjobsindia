@@ -34,7 +34,7 @@ export function NewsletterForm() {
     return (
       <div className="flex h-10 items-center gap-2 rounded-md border border-green-200 bg-green-50 px-3 text-sm font-medium text-green-700">
         <CheckCircle2 className="h-4 w-4" aria-hidden="true" />
-        Subscribed! We'll keep you updated.
+        Subscribed! We&apos;ll keep you updated.
       </div>
     );
   }
