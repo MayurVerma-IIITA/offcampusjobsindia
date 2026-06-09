@@ -435,19 +435,82 @@ export async function renameTaxonomyAction(formData: FormData) {
 
   try {
     if (type === "companies") {
-      await prisma.company.update({ where: { slug: oldSlug }, data: { name: newName, slug: newSlug } });
+      const existing = await prisma.company.findUnique({ where: { slug: newSlug } });
+      if (existing) {
+        const old = await prisma.company.findUnique({ where: { slug: oldSlug } });
+        if (old) {
+          await prisma.job.updateMany({ where: { companyId: old.id }, data: { companyId: existing.id } });
+          await prisma.company.delete({ where: { id: old.id } });
+        }
+      } else {
+        await prisma.company.update({ where: { slug: oldSlug }, data: { name: newName, slug: newSlug } });
+      }
     } else if (type === "categories") {
-      await prisma.category.update({ where: { slug: oldSlug }, data: { name: newName, slug: newSlug } });
+      const existing = await prisma.category.findUnique({ where: { slug: newSlug } });
+      if (existing) {
+        const old = await prisma.category.findUnique({ where: { slug: oldSlug } });
+        if (old) {
+          await prisma.job.updateMany({ where: { categoryId: old.id }, data: { categoryId: existing.id } });
+          await prisma.category.delete({ where: { id: old.id } });
+        }
+      } else {
+        await prisma.category.update({ where: { slug: oldSlug }, data: { name: newName, slug: newSlug } });
+      }
     } else if (type === "locations") {
-      await prisma.location.update({ where: { slug: oldSlug }, data: { name: newName, slug: newSlug } });
+      const existing = await prisma.location.findUnique({ where: { slug: newSlug } });
+      if (existing) {
+        const old = await prisma.location.findUnique({ where: { slug: oldSlug } });
+        if (old) {
+          await prisma.job.updateMany({ where: { locationId: old.id }, data: { locationId: existing.id } });
+          await prisma.location.delete({ where: { id: old.id } });
+        }
+      } else {
+        await prisma.location.update({ where: { slug: oldSlug }, data: { name: newName, slug: newSlug } });
+      }
     } else if (type === "qualifications") {
-      await prisma.qualification.update({ where: { slug: oldSlug }, data: { name: newName, slug: newSlug } });
+      const existing = await prisma.qualification.findUnique({ where: { slug: newSlug } });
+      if (existing) {
+        const old = await prisma.qualification.findUnique({ where: { slug: oldSlug } });
+        if (old) {
+          // Re-link jobs skipping duplicates
+          const oldLinks = await prisma.jobQualification.findMany({ where: { qualificationId: old.id } });
+          for (const link of oldLinks) {
+            const collision = await prisma.jobQualification.findUnique({ where: { jobId_qualificationId: { jobId: link.jobId, qualificationId: existing.id } } });
+            if (!collision) {
+              await prisma.jobQualification.update({
+                where: { jobId_qualificationId: { jobId: link.jobId, qualificationId: old.id } },
+                data: { qualificationId: existing.id }
+              });
+            }
+          }
+          await prisma.qualification.delete({ where: { id: old.id } });
+        }
+      } else {
+        await prisma.qualification.update({ where: { slug: oldSlug }, data: { name: newName, slug: newSlug } });
+      }
     } else if (type === "batches") {
-      await prisma.batch.update({ where: { slug: oldSlug }, data: { year: newName, slug: newSlug } });
+      const existing = await prisma.batch.findUnique({ where: { slug: newSlug } });
+      if (existing) {
+        const old = await prisma.batch.findUnique({ where: { slug: oldSlug } });
+        if (old) {
+          const oldLinks = await prisma.jobBatch.findMany({ where: { batchId: old.id } });
+          for (const link of oldLinks) {
+            const collision = await prisma.jobBatch.findUnique({ where: { jobId_batchId: { jobId: link.jobId, batchId: existing.id } } });
+            if (!collision) {
+              await prisma.jobBatch.update({
+                where: { jobId_batchId: { jobId: link.jobId, batchId: old.id } },
+                data: { batchId: existing.id }
+              });
+            }
+          }
+          await prisma.batch.delete({ where: { id: old.id } });
+        }
+      } else {
+        await prisma.batch.update({ where: { slug: oldSlug }, data: { year: newName, slug: newSlug } });
+      }
     }
   } catch (e) {
-    // If slug collision, ignore or handle gracefully
-    console.error(e);
+    console.error("Rename Error:", e);
   }
 
   revalidatePath("/admin/taxonomy");
