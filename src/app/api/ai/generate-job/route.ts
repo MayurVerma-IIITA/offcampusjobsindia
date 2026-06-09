@@ -1,7 +1,7 @@
 import { GoogleGenerativeAI } from "@google/generative-ai";
 import { NextResponse } from "next/server";
 import { z } from "zod";
-
+import { getTaxonomies } from "@/lib/jobs";
 const requestSchema = z.object({
   jobText: z.string().optional(),
   careerUrl: z.string().url().optional().or(z.literal("")),
@@ -119,9 +119,23 @@ export async function POST(request: Request) {
   }
 
   const careerPageText = await fetchCareerUrl(body.data.careerUrl || undefined);
+  const taxonomies = await getTaxonomies();
+  const existingCategories = taxonomies.categories.map((c) => c.name).join(", ");
+  const existingLocations = taxonomies.locations.map((l) => l.name).join(", ");
+  const existingCompanies = taxonomies.companies.map((c) => c.name).join(", ");
+  const existingQualifications = taxonomies.qualifications.map((q) => q.name).join(", ");
+
   const model = gemini.getGenerativeModel({ model: "gemini-2.5-flash" });
   const prompt = `Extract job data and generate an SEO article for Off Campus Jobs India.
 Return strict JSON only. No markdown.
+
+CRITICAL TAXONOMY RULES:
+Before inventing new names for Category, Location, Company, or Qualification, you MUST check the existing lists below. If a match exists, you MUST use the EXACT spelling and casing from the list. Only create a new one if it is completely missing.
+- Existing Categories: ${existingCategories || "None"}
+- Existing Locations: ${existingLocations || "None"}
+- Existing Companies: ${existingCompanies || "None"}
+- Existing Qualifications: ${existingQualifications || "None"}
+
 The JSON shape must be:
 {
   "title": string,
