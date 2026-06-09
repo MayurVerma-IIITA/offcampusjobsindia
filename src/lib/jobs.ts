@@ -106,7 +106,7 @@ function sampleFilter(filters: JobFilters = {}): Job[] {
 
     return (
       job.status !== "ARCHIVED" &&
-      (!filters.status || job.status === filters.status.toUpperCase()) &&
+      (filters.status === "ALL" || (filters.status ? job.status === filters.status.toUpperCase() : job.status === "PUBLISHED")) &&
       (!query || searchable.includes(query)) &&
       (!filters.category || job.category.slug === filters.category) &&
       (!filters.company || job.company.slug === filters.company) &&
@@ -149,7 +149,7 @@ export async function getPaginatedJobs(filters: JobFilters = {}): Promise<Pagina
 
   const search = filters.query?.trim();
   const where: Prisma.JobWhereInput = {
-    status: filters.status ? toStatus(filters.status) : { not: "ARCHIVED" },
+    status: filters.status === "ALL" ? { not: "ARCHIVED" } : (filters.status ? toStatus(filters.status) : "PUBLISHED"),
     ...(filters.category ? { category: { slug: filters.category } } : {}),
     ...(filters.company ? { company: { slug: filters.company } } : {}),
     ...(filters.location ? { location: { slug: filters.location } } : {}),

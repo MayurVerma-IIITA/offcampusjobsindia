@@ -19,7 +19,7 @@ import { getJobs } from "@/lib/jobs";
 
 export default async function AdminPage() {
   const user = await requireUser();
-  const jobs = await getJobs();
+  const jobs = await getJobs({ status: "ALL" });
   const published = jobs.filter((job) => job.status === "PUBLISHED").length;
   const expired = jobs.filter((job) => job.status === "EXPIRED").length;
   const companies = new Set(jobs.map((job) => job.company.slug)).size;
