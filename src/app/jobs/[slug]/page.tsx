@@ -75,8 +75,14 @@ export default async function JobDetailPage({
   const isExpired = Boolean(job.deadline && new Date(job.deadline) < now);
   const imageUrls = job.featuredImage ? getTransformedImageUrls(job.featuredImage) : null;
 
-  const supabase = await createClient();
-  const { data: { user } } = await supabase.auth.getUser();
+  let user = null;
+  try {
+    const supabase = await createClient();
+    const { data } = await supabase.auth.getUser();
+    user = data.user;
+  } catch (error) {
+    console.warn("Supabase auth error (likely missing env vars):", error);
+  }
   
   let isPremiumUser = false;
   if (user) {

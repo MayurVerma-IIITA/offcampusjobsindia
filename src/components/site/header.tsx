@@ -10,8 +10,14 @@ import { LoginButton } from "@/components/LoginButton";
 
 export async function SiteHeader() {
   const settings = await getSiteSettings();
-  const supabase = await createClient();
-  const { data: { user } } = await supabase.auth.getUser();
+  let user = null;
+  try {
+    const supabase = await createClient();
+    const { data } = await supabase.auth.getUser();
+    user = data.user;
+  } catch (error) {
+    console.warn("Supabase auth error (likely missing env vars):", error);
+  }
   
   let isPremium = false;
   if (user) {
