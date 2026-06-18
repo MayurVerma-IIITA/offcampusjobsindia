@@ -85,7 +85,7 @@ export default async function JobDetailPage({
     isPremiumUser = member?.isPremium || false;
   }
 
-  // @ts-ignore Prisma type might not reflect premium fields perfectly if generated before Next app restart
+  // @ts-expect-error Prisma type might not reflect premium fields perfectly if generated before Next app restart
   const isLocked = Boolean(job.premiumOnly || (job.earlyAccessUntil && new Date(job.earlyAccessUntil) > now));
   const showPaywall = isLocked && !isPremiumUser;
 

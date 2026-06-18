@@ -49,6 +49,7 @@ export function CheckoutButton() {
         name: 'Off Campus Jobs India',
         description: 'Premium Lifetime Access',
         order_id: orderData.orderId,
+        // eslint-disable-next-line @typescript-eslint/no-explicit-any
         handler: async function (response: any) {
           try {
             const verifyRes = await fetch('/api/razorpay/verify', {
@@ -80,6 +81,7 @@ export function CheckoutButton() {
 
       const paymentObject = new window.Razorpay(options)
       paymentObject.open()
+    // eslint-disable-next-line @typescript-eslint/no-explicit-any
     } catch (err: any) {
       console.error(err)
       alert(err.message || 'Something went wrong.')
