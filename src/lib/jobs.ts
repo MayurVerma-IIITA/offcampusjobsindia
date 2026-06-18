@@ -84,6 +84,8 @@ function mapPrismaJob(job: PrismaJob): Job {
     metaDescription: job.metaDescription,
     excerpt: job.excerpt,
     articleContent: job.articleContent,
+    premiumOnly: job.premiumOnly,
+    earlyAccessUntil: job.earlyAccessUntil?.toISOString() || null,
   };
 }
 

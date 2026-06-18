@@ -80,9 +80,11 @@ export default async function JobDetailPage({
   
   let isPremiumUser = false;
   if (user) {
-    const prisma = getPrisma()!;
-    const member = await prisma.member.findUnique({ where: { id: user.id } });
-    isPremiumUser = member?.isPremium || false;
+    const prisma = getPrisma();
+    if (prisma) {
+      const member = await prisma.member.findUnique({ where: { id: user.id } });
+      isPremiumUser = member?.isPremium || false;
+    }
   }
 
   const isLocked = Boolean(job.premiumOnly || (job.earlyAccessUntil && new Date(job.earlyAccessUntil) > now));

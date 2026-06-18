@@ -15,9 +15,11 @@ export async function SiteHeader() {
   
   let isPremium = false;
   if (user) {
-    const prisma = getPrisma()!;
-    const member = await prisma.member.findUnique({ where: { id: user.id } });
-    isPremium = member?.isPremium || false;
+    const prisma = getPrisma();
+    if (prisma) {
+      const member = await prisma.member.findUnique({ where: { id: user.id } });
+      isPremium = member?.isPremium || false;
+    }
   }
 
   return (
