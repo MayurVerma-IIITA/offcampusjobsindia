@@ -1,6 +1,6 @@
 import { NextResponse } from 'next/server'
 import { createClient } from '@/lib/supabase/server'
-import { prisma } from '@/lib/prisma'
+import { getPrisma } from '@/lib/prisma'
 
 export async function GET(request: Request) {
   const { searchParams, origin } = new URL(request.url)
@@ -14,6 +14,7 @@ export async function GET(request: Request) {
     const { data, error } = await supabase.auth.exchangeCodeForSession(code)
     
     if (!error && data.user) {
+      const prisma = getPrisma()!
       // Upsert user into Prisma Member table
       await prisma.member.upsert({
         where: { id: data.user.id },

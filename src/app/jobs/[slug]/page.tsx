@@ -15,7 +15,7 @@ import { absoluteUrl, jobPostingJsonLd } from "@/lib/seo";
 import { getTransformedImageUrls } from "@/lib/supabase";
 import { ImageFallback } from "@/components/ui/image-fallback";
 import { createClient } from "@/lib/supabase/server";
-import { prisma } from "@/lib/prisma";
+import { getPrisma } from "@/lib/prisma";
 import { PaywallCta } from "@/components/site/paywall-cta";
 
 export const revalidate = 900;
@@ -80,6 +80,7 @@ export default async function JobDetailPage({
   
   let isPremiumUser = false;
   if (user) {
+    const prisma = getPrisma()!;
     const member = await prisma.member.findUnique({ where: { id: user.id } });
     isPremiumUser = member?.isPremium || false;
   }

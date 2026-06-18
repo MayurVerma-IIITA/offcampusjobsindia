@@ -1,7 +1,7 @@
 import { NextResponse } from 'next/server'
 import crypto from 'crypto'
 import { createClient } from '@/lib/supabase/server'
-import { prisma } from '@/lib/prisma'
+import { getPrisma } from '@/lib/prisma'
 
 export async function POST(req: Request) {
   try {
@@ -23,6 +23,8 @@ export async function POST(req: Request) {
       .createHmac('sha256', secret)
       .update(razorpay_order_id + '|' + razorpay_payment_id)
       .digest('hex')
+
+    const prisma = getPrisma()!
 
     if (generated_signature !== razorpay_signature) {
       // Record failure if we can find the payment

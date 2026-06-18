@@ -1,5 +1,5 @@
 import { createClient } from '@/lib/supabase/server'
-import { prisma } from '@/lib/prisma'
+import { getPrisma } from '@/lib/prisma'
 import { CheckoutButton } from '@/components/CheckoutButton'
 import { LoginButton } from '@/components/LoginButton'
 import { Check, Star } from 'lucide-react'
@@ -16,6 +16,7 @@ export default async function PremiumPage() {
 
   let isPremium = false
   if (user) {
+    const prisma = getPrisma()!
     const member = await prisma.member.findUnique({ where: { id: user.id } })
     isPremium = member?.isPremium || false
   }

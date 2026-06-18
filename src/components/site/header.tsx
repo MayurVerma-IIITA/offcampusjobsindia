@@ -5,7 +5,7 @@ import { getSiteSettings } from "@/lib/settings";
 import { siteConfig } from "@/lib/site";
 import { buttonVariants } from "@/components/ui/button";
 import { createClient } from "@/lib/supabase/server";
-import { prisma } from "@/lib/prisma";
+import { getPrisma } from "@/lib/prisma";
 import { LoginButton } from "@/components/LoginButton";
 
 export async function SiteHeader() {
@@ -15,6 +15,7 @@ export async function SiteHeader() {
   
   let isPremium = false;
   if (user) {
+    const prisma = getPrisma()!;
     const member = await prisma.member.findUnique({ where: { id: user.id } });
     isPremium = member?.isPremium || false;
   }
