@@ -1,5 +1,6 @@
+import Image from "next/image";
 import Link from "next/link";
-import { BriefcaseBusiness, Send } from "lucide-react";
+import { Send } from "lucide-react";
 import { getSiteSettings } from "@/lib/settings";
 import { siteConfig } from "@/lib/site";
 import { buttonVariants } from "@/components/ui/button";
@@ -11,9 +12,7 @@ export async function SiteHeader() {
     <header className="sticky top-0 z-40 border-b bg-background/95 backdrop-blur">
       <div className="mx-auto flex h-16 max-w-7xl items-center justify-between px-4">
         <Link href="/" className="flex items-center gap-2 font-semibold">
-          <span className="flex size-9 items-center justify-center rounded-md bg-primary text-primary-foreground">
-            <BriefcaseBusiness aria-hidden="true" />
-          </span>
+          <Image src="/logo.png" alt="Off Campus Jobs India Logo" width={36} height={36} className="rounded-md" />
           <span>Off Campus Jobs India</span>
         </Link>
         <nav className="hidden items-center gap-6 text-sm text-muted-foreground md:flex">
