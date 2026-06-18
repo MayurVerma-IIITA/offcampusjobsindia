@@ -10,7 +10,6 @@ import { categories } from "@/lib/sample-data";
 import { getArticles } from "@/lib/articles";
 import { getLatestJobs } from "@/lib/jobs";
 
-export const revalidate = 900;
 
 export default async function Home() {
   const latestJobs = await getLatestJobs(6);

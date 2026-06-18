@@ -18,7 +18,6 @@ import { createClient } from "@/lib/supabase/server";
 import { getPrisma } from "@/lib/prisma";
 import { PaywallCta } from "@/components/site/paywall-cta";
 
-export const revalidate = 900;
 
 export async function generateMetadata({
   params,
