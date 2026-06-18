@@ -4,9 +4,20 @@ import { Send } from "lucide-react";
 import { getSiteSettings } from "@/lib/settings";
 import { siteConfig } from "@/lib/site";
 import { buttonVariants } from "@/components/ui/button";
+import { createClient } from "@/lib/supabase/server";
+import { prisma } from "@/lib/prisma";
+import { LoginButton } from "@/components/LoginButton";
 
 export async function SiteHeader() {
   const settings = await getSiteSettings();
+  const supabase = await createClient();
+  const { data: { user } } = await supabase.auth.getUser();
+  
+  let isPremium = false;
+  if (user) {
+    const member = await prisma.member.findUnique({ where: { id: user.id } });
+    isPremium = member?.isPremium || false;
+  }
 
   return (
     <header className="sticky top-0 z-40 border-b bg-background/95 backdrop-blur">
@@ -22,14 +33,24 @@ export async function SiteHeader() {
             </Link>
           ))}
         </nav>
-        <a
-          href={settings.telegramUrl}
-          className={buttonVariants({ size: "sm" })}
-          data-event="telegram_click"
-        >
-          <Send data-icon="inline-start" aria-hidden="true" />
-          Telegram
-        </a>
+        <div className="flex items-center gap-4">
+          {user ? (
+            <div className="hidden items-center gap-2 md:flex">
+              <span className="text-sm font-medium">{user.user_metadata?.full_name || user.email?.split('@')[0]}</span>
+              {isPremium && <span className="rounded-full bg-yellow-100 px-2 py-0.5 text-xs font-semibold text-yellow-800">👑 Premium</span>}
+            </div>
+          ) : (
+            <LoginButton />
+          )}
+          <a
+            href={settings.telegramUrl}
+            className={buttonVariants({ size: "sm" })}
+            data-event="telegram_click"
+          >
+            <Send data-icon="inline-start" aria-hidden="true" />
+            <span className="hidden sm:inline">Telegram</span>
+          </a>
+        </div>
       </div>
     </header>
   );

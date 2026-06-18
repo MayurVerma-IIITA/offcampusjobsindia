@@ -20,6 +20,12 @@ enum JobStatus {
   ARCHIVED
 }
 
+enum PaymentStatus {
+  PENDING
+  SUCCESS
+  FAILED
+}
+
 enum WorkMode {
   REMOTE
   HYBRID
@@ -103,6 +109,8 @@ model Job {
   excerpt         String
   articleContent  String
   status          JobStatus       @default(DRAFT)
+  premiumOnly     Boolean         @default(false)
+  earlyAccessUntil DateTime?
   publishedAt     DateTime?
   createdAt       DateTime        @default(now())
   updatedAt       DateTime        @updatedAt
@@ -181,4 +189,31 @@ model AnalyticsEvent {
 
   @@index([type, createdAt])
   @@index([jobId])
+}
+
+model Member {
+  id                String    @id @default(uuid())
+  email             String    @unique
+  name              String?
+  avatar            String?
+  isPremium         Boolean   @default(false)
+  premiumValidUntil DateTime?
+  createdAt         DateTime  @default(now())
+  updatedAt         DateTime  @updatedAt
+  payments          Payment[]
+}
+
+model Payment {
+  id                String        @id @default(cuid())
+  memberId          String
+  orderId           String        @unique
+  paymentId         String?       @unique
+  amount            Int
+  status            PaymentStatus @default(PENDING)
+  createdAt         DateTime      @default(now())
+  updatedAt         DateTime      @updatedAt
+  
+  member            Member        @relation(fields: [memberId], references: [id])
+  
+  @@index([memberId])
 }

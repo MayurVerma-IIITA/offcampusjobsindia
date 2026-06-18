@@ -14,6 +14,9 @@ import { formatDate } from "@/lib/utils";
 import { absoluteUrl, jobPostingJsonLd } from "@/lib/seo";
 import { getTransformedImageUrls } from "@/lib/supabase";
 import { ImageFallback } from "@/components/ui/image-fallback";
+import { createClient } from "@/lib/supabase/server";
+import { prisma } from "@/lib/prisma";
+import { PaywallCta } from "@/components/site/paywall-cta";
 
 export const revalidate = 900;
 
@@ -68,8 +71,22 @@ export default async function JobDetailPage({
   }
 
   const related = await getRelatedJobs(job);
-  const isExpired = Boolean(job.deadline && new Date(job.deadline) < new Date());
+  const now = new Date();
+  const isExpired = Boolean(job.deadline && new Date(job.deadline) < now);
   const imageUrls = job.featuredImage ? getTransformedImageUrls(job.featuredImage) : null;
+
+  const supabase = await createClient();
+  const { data: { user } } = await supabase.auth.getUser();
+  
+  let isPremiumUser = false;
+  if (user) {
+    const member = await prisma.member.findUnique({ where: { id: user.id } });
+    isPremiumUser = member?.isPremium || false;
+  }
+
+  // @ts-ignore Prisma type might not reflect premium fields perfectly if generated before Next app restart
+  const isLocked = Boolean(job.premiumOnly || (job.earlyAccessUntil && new Date(job.earlyAccessUntil) > now));
+  const showPaywall = isLocked && !isPremiumUser;
 
   return (
     <main className="mx-auto grid max-w-7xl gap-8 px-4 py-10 lg:grid-cols-[minmax(0,1fr)_320px]">
@@ -144,6 +161,8 @@ export default async function JobDetailPage({
               This job page remains live for reference. Explore related active jobs below.
             </p>
           </div>
+        ) : showPaywall ? (
+          <PaywallCta />
         ) : (
           <a
             href={job.applyUrl}
