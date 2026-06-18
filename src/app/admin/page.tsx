@@ -78,6 +78,7 @@ export default async function AdminPage() {
       <section className="mt-8 grid gap-4 md:grid-cols-4">
         {[
           { label: "Settings", href: "/admin/settings", icon: Settings },
+          { label: "Members", href: "/admin/members", icon: Users },
           { label: "Editors", href: "/admin/users", icon: Users },
           { label: "Taxonomy", href: "/admin/taxonomy", icon: Tags },
           { label: "Media", href: "/admin/media", icon: Image },

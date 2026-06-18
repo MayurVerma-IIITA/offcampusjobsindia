@@ -45,6 +45,8 @@ const jobSchema = z.object({
   excerpt: z.string().min(20),
   articleContent: z.string().min(50),
   status: z.enum(["DRAFT", "PUBLISHED", "EXPIRED", "ARCHIVED"]),
+  premiumOnly: z.boolean().optional(),
+  earlyAccessUntil: z.string().optional(),
 });
 
 function parseCsv(value: string) {
@@ -119,6 +121,8 @@ export async function saveJobAction(formData: FormData) {
     excerpt: text(formData, "excerpt"),
     articleContent: text(formData, "articleContent"),
     status: text(formData, "status") || "DRAFT",
+    premiumOnly: formData.get("premiumOnly") === "on",
+    earlyAccessUntil: text(formData, "earlyAccessUntil"),
   });
 
   if (!parsed.success) {
@@ -149,6 +153,8 @@ export async function saveJobAction(formData: FormData) {
         excerpt: data.excerpt,
         articleContent: data.articleContent,
         status: data.status,
+        premiumOnly: data.premiumOnly,
+        earlyAccessUntil: data.earlyAccessUntil ? new Date(data.earlyAccessUntil) : null,
         publishedAt: data.status === "PUBLISHED" ? publishedAt : null,
         qualifications: {
           deleteMany: {},
@@ -181,6 +187,8 @@ export async function saveJobAction(formData: FormData) {
         excerpt: data.excerpt,
         articleContent: data.articleContent,
         status: data.status,
+        premiumOnly: data.premiumOnly,
+        earlyAccessUntil: data.earlyAccessUntil ? new Date(data.earlyAccessUntil) : null,
         publishedAt,
         authorId: user.sub,
         qualifications: {

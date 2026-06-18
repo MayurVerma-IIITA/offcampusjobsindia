@@ -35,6 +35,8 @@ export function JobForm({
     metaDescription: job?.metaDescription || d.metaDescription || "",
     excerpt: job?.excerpt || d.excerpt || "",
     articleContent: job?.articleContent || d.articleContent || "",
+    premiumOnly: job?.premiumOnly || false,
+    earlyAccessUntil: job?.earlyAccessUntil ? new Date(job.earlyAccessUntil).toISOString().slice(0, 16) : "",
   };
 
   return (
@@ -118,6 +120,25 @@ export function JobForm({
             />
           </div>
           <Field label="Apply URL" name="applyUrl" defaultValue={v.applyUrl} required />
+          
+          <div className="grid gap-4 md:grid-cols-2">
+            <label className="flex items-center gap-2 text-sm font-medium">
+              <input
+                type="checkbox"
+                name="premiumOnly"
+                defaultChecked={v.premiumOnly}
+                className="h-4 w-4 rounded border-gray-300 text-primary focus:ring-primary"
+              />
+              Premium Only (Lock forever)
+            </label>
+            <Field
+              label="Early Access Expiry (Optional)"
+              name="earlyAccessUntil"
+              type="datetime-local"
+              defaultValue={v.earlyAccessUntil}
+            />
+          </div>
+
           <Field label="SEO title" name="seoTitle" defaultValue={v.seoTitle} required />
           <label className="grid gap-2 text-sm font-medium">
             Meta description
