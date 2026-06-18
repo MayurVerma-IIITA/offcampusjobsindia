@@ -1,3 +1,4 @@
+import { cache } from "react";
 import { siteConfig } from "@/lib/site";
 import { getPrisma } from "@/lib/prisma";
 import type { SiteSettings } from "@/lib/types";
@@ -13,7 +14,7 @@ export const defaultSettings: SiteSettings = {
   internalLinkingEnabled: true,
 };
 
-export async function getSiteSettings(): Promise<SiteSettings> {
+export const getSiteSettings = cache(async (): Promise<SiteSettings> => {
   const prisma = getPrisma();
 
   if (!prisma) {
@@ -27,7 +28,7 @@ export async function getSiteSettings(): Promise<SiteSettings> {
     ...defaultSettings,
     ...(values.site as Partial<SiteSettings> | undefined),
   };
-}
+});
 
 export async function saveSiteSettings(settings: SiteSettings) {
   const prisma = getPrisma();

@@ -16,6 +16,9 @@ export async function SiteHeader() {
     const { data } = await supabase.auth.getUser();
     user = data.user;
   } catch (error) {
+    if (error && typeof error === 'object' && 'digest' in error && error.digest === 'DYNAMIC_SERVER_USAGE') {
+      throw error;
+    }
     console.warn("Supabase auth error (likely missing env vars):", error);
   }
   
