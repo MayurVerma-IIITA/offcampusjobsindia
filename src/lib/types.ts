@@ -25,6 +25,8 @@ export type Job = {
   metaDescription: string;
   excerpt: string;
   articleContent: string;
+  premiumOnly?: boolean;
+  earlyAccessUntil?: string | null;
 };
 
 export type JobFilters = {

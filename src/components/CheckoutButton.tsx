@@ -42,15 +42,14 @@ export function CheckoutButton() {
         throw new Error(orderData.error || 'Failed to create order')
       }
 
-      const options = {
+      const options: RazorpayOptions = {
         key: process.env.NEXT_PUBLIC_RAZORPAY_KEY_ID,
         amount: orderData.amount,
         currency: orderData.currency,
         name: 'Off Campus Jobs India',
         description: 'Premium Lifetime Access',
         order_id: orderData.orderId,
-        // eslint-disable-next-line @typescript-eslint/no-explicit-any
-        handler: async function (response: any) {
+        handler: async function (response) {
           try {
             const verifyRes = await fetch('/api/razorpay/verify', {
               method: 'POST',
@@ -81,10 +80,9 @@ export function CheckoutButton() {
 
       const paymentObject = new window.Razorpay(options)
       paymentObject.open()
-    // eslint-disable-next-line @typescript-eslint/no-explicit-any
-    } catch (err: any) {
+    } catch (err: unknown) {
       console.error(err)
-      alert(err.message || 'Something went wrong.')
+      alert(err instanceof Error ? err.message : 'Something went wrong.')
     } finally {
       setLoading(false)
     }
