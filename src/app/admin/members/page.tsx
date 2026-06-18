@@ -81,7 +81,7 @@ export default async function AdminMembersPage() {
                     {member.isPremium ? (
                       <Badge className="bg-yellow-100 text-yellow-800 hover:bg-yellow-200">Premium</Badge>
                     ) : (
-                      <Badge variant="secondary">Free</Badge>
+                      <Badge className="bg-secondary text-secondary-foreground">Free</Badge>
                     )}
                   </TableCell>
                   <TableCell className="text-muted-foreground">{formatDate(member.createdAt)}</TableCell>
