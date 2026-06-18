@@ -18,6 +18,7 @@ import { createClient } from "@/lib/supabase/server";
 import { getPrisma } from "@/lib/prisma";
 import { PaywallCta } from "@/components/site/paywall-cta";
 
+export const dynamic = 'force-dynamic';
 
 export async function generateMetadata({
   params,
