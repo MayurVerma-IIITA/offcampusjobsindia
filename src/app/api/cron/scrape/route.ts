@@ -10,7 +10,7 @@ interface GreenhouseJob {
   absolute_url: string;
   internal_job_id: number;
   location: { name: string };
-  metadata: any[];
+  metadata: unknown[];
   id: number;
   updated_at: string;
   requisition_id: string;
