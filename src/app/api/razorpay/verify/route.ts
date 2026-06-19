@@ -73,7 +73,7 @@ export async function POST(req: Request) {
     // Send Email using Resend
     try {
       await resend.emails.send({
-        from: 'Off Campus Jobs India <onboarding@resend.dev>', // Change to your verified domain later (e.g., updates@offcampusjobsindia.com)
+        from: 'Off Campus Jobs India <support@offcampusjobsindia.com>',
         to: email,
         subject: '🎉 Your Premium Telegram Group Invite is Here!',
         html: `
