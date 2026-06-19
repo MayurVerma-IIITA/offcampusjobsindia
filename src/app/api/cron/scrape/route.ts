@@ -141,7 +141,7 @@ export async function GET(request: Request) {
             continue;
           }
 
-          const articleContent = formatAiDraftToMarkdown(aiDraft);
+          const articleContent = formatAiDraftToMarkdown(aiDraft as AiDraft);
 
           // Upsert taxonomies (Company, Location)
           const companyName = aiDraft.company || target.name;
