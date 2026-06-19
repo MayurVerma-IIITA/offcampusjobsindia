@@ -5,6 +5,7 @@ import { SiteHeader } from "@/components/site/header";
 import { getSiteSettings } from "@/lib/settings";
 import { siteConfig } from "@/lib/site";
 import { Providers } from "./providers";
+import { FloatingCTA } from "@/components/floating-cta";
 import "./globals.css";
 
 export const metadata: Metadata = {
@@ -53,6 +54,7 @@ gtag('config', '${settings.googleAnalyticsId}');`}
           <SiteHeader />
           {children}
           <SiteFooter />
+          <FloatingCTA />
         </Providers>
       </body>
     </html>
