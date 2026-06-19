@@ -157,33 +157,45 @@ export default async function JobDetailPage({
           ))}
         </dl>
 
-        <div className="prose prose-neutral max-w-none">
-          <Markdown>{job.articleContent}</Markdown>
-        </div>
-
-        <div className="my-8">
-          <AdSlot slot="insideArticle" />
-        </div>
-
-        {isExpired ? (
-          <div className="rounded-lg border bg-muted p-5">
-            <p className="font-semibold">Applications Closed</p>
-            <p className="mt-2 text-sm text-muted-foreground">
-              This job page remains live for reference. Explore related active jobs below.
-            </p>
-          </div>
-        ) : showPaywall ? (
-          <PaywallCta />
+        {showPaywall ? (
+          <>
+            <div className="relative">
+              <div className="prose prose-neutral max-w-none line-clamp-6" aria-hidden="true">
+                <Markdown>{job.articleContent}</Markdown>
+              </div>
+              <div className="pointer-events-none absolute inset-0 bg-gradient-to-b from-transparent via-background/80 to-background" />
+            </div>
+            <PaywallCta />
+          </>
         ) : (
-          <a
-            href={job.applyUrl}
-            className={buttonVariants({ size: "lg" })}
-            data-event="apply_click"
-            data-job-id={job.id}
-          >
-            Apply on company website
-            <ExternalLink data-icon="inline-end" aria-hidden="true" />
-          </a>
+          <>
+            <div className="prose prose-neutral max-w-none">
+              <Markdown>{job.articleContent}</Markdown>
+            </div>
+
+            <div className="my-8">
+              <AdSlot slot="insideArticle" />
+            </div>
+
+            {isExpired ? (
+              <div className="rounded-lg border bg-muted p-5">
+                <p className="font-semibold">Applications Closed</p>
+                <p className="mt-2 text-sm text-muted-foreground">
+                  This job page remains live for reference. Explore related active jobs below.
+                </p>
+              </div>
+            ) : (
+              <a
+                href={job.applyUrl}
+                className={buttonVariants({ size: "lg" })}
+                data-event="apply_click"
+                data-job-id={job.id}
+              >
+                Apply on company website
+                <ExternalLink data-icon="inline-end" aria-hidden="true" />
+              </a>
+            )}
+          </>
         )}
 
         <script

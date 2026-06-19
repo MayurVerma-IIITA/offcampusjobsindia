@@ -7,6 +7,7 @@ import { buttonVariants } from "@/components/ui/button";
 import { createClient } from "@/lib/supabase/server";
 import { getPrisma } from "@/lib/prisma";
 import { LoginButton } from "@/components/LoginButton";
+import { SignOutButton } from "@/components/SignOutButton";
 
 export async function SiteHeader() {
   const settings = await getSiteSettings();
@@ -50,6 +51,7 @@ export async function SiteHeader() {
             <div className="hidden items-center gap-2 md:flex">
               <span className="text-sm font-medium">{user.user_metadata?.full_name || user.email?.split('@')[0]}</span>
               {isPremium && <span className="rounded-full bg-yellow-100 px-2 py-0.5 text-xs font-semibold text-yellow-800">👑 Premium</span>}
+              <SignOutButton />
             </div>
           ) : (
             <LoginButton />
