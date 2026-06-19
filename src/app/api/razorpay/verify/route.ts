@@ -3,10 +3,12 @@ import crypto from 'crypto'
 import { getPrisma } from '@/lib/prisma'
 import { Resend } from 'resend'
 
-const resend = new Resend(process.env.RESEND_API_KEY)
+export const dynamic = 'force-dynamic'
 
 export async function POST(req: Request) {
   try {
+    const resend = new Resend(process.env.RESEND_API_KEY)
+
     const { razorpay_order_id, razorpay_payment_id, razorpay_signature, email } = await req.json()
 
     if (!razorpay_order_id || !razorpay_payment_id || !razorpay_signature || !email) {
