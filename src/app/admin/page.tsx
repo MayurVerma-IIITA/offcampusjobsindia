@@ -15,14 +15,33 @@ import { StatusDropdown } from "@/components/admin/status-dropdown";
 import { Card, CardContent, CardHeader, CardTitle } from "@/components/ui/card";
 import { getAnalyticsSummary } from "@/lib/analytics";
 import { requireUser } from "@/lib/auth";
-import { getJobs } from "@/lib/jobs";
+import { getPaginatedJobs } from "@/lib/jobs";
+import { getPrisma } from "@/lib/prisma";
 
 export default async function AdminPage() {
   const user = await requireUser();
-  const jobs = await getJobs({ status: "ALL" });
-  const published = jobs.filter((job) => job.status === "PUBLISHED").length;
-  const expired = jobs.filter((job) => job.status === "EXPIRED").length;
-  const companies = new Set(jobs.map((job) => job.company.slug)).size;
+  
+  // Fetch up to 100 jobs for the dashboard table
+  const paginated = await getPaginatedJobs({ status: "ALL", pageSize: 100 });
+  const jobs = paginated.jobs;
+  
+  const prisma = getPrisma();
+  let published = 0;
+  let expired = 0;
+  let companies = 0;
+
+  if (prisma) {
+    [published, expired, companies] = await Promise.all([
+      prisma.job.count({ where: { status: "PUBLISHED" } }),
+      prisma.job.count({ where: { status: "EXPIRED" } }),
+      prisma.company.count(),
+    ]);
+  } else {
+    published = jobs.filter((job) => job.status === "PUBLISHED").length;
+    expired = jobs.filter((job) => job.status === "EXPIRED").length;
+    companies = new Set(jobs.map((job) => job.company.slug)).size;
+  }
+
   const analytics = await getAnalyticsSummary();
 
   return (
