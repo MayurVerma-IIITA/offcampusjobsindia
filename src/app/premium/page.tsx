@@ -82,21 +82,8 @@ export default function PremiumPage() {
           ))}
         </div>
 
-        {/* Feature Cards */}
-        <div className="mb-16 grid gap-6 sm:grid-cols-2">
-          {features.map((feature) => (
-            <div key={feature.title} className="rounded-xl border bg-card p-6 shadow-sm">
-              <div className="mb-3 flex h-10 w-10 items-center justify-center rounded-lg bg-primary/10">
-                <feature.icon className="h-5 w-5 text-primary" />
-              </div>
-              <h3 className="mb-1 font-semibold">{feature.title}</h3>
-              <p className="text-sm text-muted-foreground">{feature.description}</p>
-            </div>
-          ))}
-        </div>
-
         {/* Pricing + Checkout Card */}
-        <div className="mx-auto max-w-lg overflow-hidden rounded-2xl border bg-card shadow-lg">
+        <div className="mb-16 mx-auto max-w-lg overflow-hidden rounded-2xl border bg-card shadow-lg">
           <div className="bg-gradient-to-br from-yellow-50 to-yellow-100 p-8 text-center">
             <h2 className="text-2xl font-bold">Lifetime Access</h2>
             <div className="mt-4 flex items-center justify-center gap-1">
@@ -117,6 +104,19 @@ export default function PremiumPage() {
 
             <PremiumCheckout />
           </div>
+        </div>
+
+        {/* Feature Cards */}
+        <div className="mb-16 grid gap-6 sm:grid-cols-2">
+          {features.map((feature) => (
+            <div key={feature.title} className="rounded-xl border bg-card p-6 shadow-sm">
+              <div className="mb-3 flex h-10 w-10 items-center justify-center rounded-lg bg-primary/10">
+                <feature.icon className="h-5 w-5 text-primary" />
+              </div>
+              <h3 className="mb-1 font-semibold">{feature.title}</h3>
+              <p className="text-sm text-muted-foreground">{feature.description}</p>
+            </div>
+          ))}
         </div>
 
         {/* Social Proof */}
