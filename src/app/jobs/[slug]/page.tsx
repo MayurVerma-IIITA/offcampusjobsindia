@@ -14,11 +14,8 @@ import { formatDate } from "@/lib/utils";
 import { absoluteUrl, jobPostingJsonLd } from "@/lib/seo";
 import { getTransformedImageUrls } from "@/lib/supabase";
 import { ImageFallback } from "@/components/ui/image-fallback";
-import { createClient } from "@/lib/supabase/server";
-import { getPrisma } from "@/lib/prisma";
-import { PaywallCta } from "@/components/site/paywall-cta";
 
-export const dynamic = 'force-dynamic';
+export const revalidate = 900;
 
 export async function generateMetadata({
   params,
@@ -74,30 +71,6 @@ export default async function JobDetailPage({
   const now = new Date();
   const isExpired = Boolean(job.deadline && new Date(job.deadline) < now);
   const imageUrls = job.featuredImage ? getTransformedImageUrls(job.featuredImage) : null;
-
-  let user = null;
-  try {
-    const supabase = await createClient();
-    const { data } = await supabase.auth.getUser();
-    user = data.user;
-  } catch (error) {
-    if (error && typeof error === 'object' && 'digest' in error && error.digest === 'DYNAMIC_SERVER_USAGE') {
-      throw error;
-    }
-    console.warn("Supabase auth error (likely missing env vars):", error);
-  }
-  
-  let isPremiumUser = false;
-  if (user) {
-    const prisma = getPrisma();
-    if (prisma) {
-      const member = await prisma.member.findUnique({ where: { id: user.id } });
-      isPremiumUser = member?.isPremium || false;
-    }
-  }
-
-  const isLocked = Boolean(job.premiumOnly || (job.earlyAccessUntil && new Date(job.earlyAccessUntil) > now));
-  const showPaywall = isLocked && !isPremiumUser;
 
   return (
     <main className="mx-auto grid max-w-7xl gap-8 px-4 py-10 lg:grid-cols-[minmax(0,1fr)_320px]">
@@ -157,45 +130,31 @@ export default async function JobDetailPage({
           ))}
         </dl>
 
-        {showPaywall ? (
-          <>
-            <div className="relative">
-              <div className="prose prose-neutral max-w-none line-clamp-6" aria-hidden="true">
-                <Markdown>{job.articleContent}</Markdown>
-              </div>
-              <div className="pointer-events-none absolute inset-0 bg-gradient-to-b from-transparent via-background/80 to-background" />
-            </div>
-            <PaywallCta />
-          </>
+        <div className="prose prose-neutral max-w-none">
+          <Markdown>{job.articleContent}</Markdown>
+        </div>
+
+        <div className="my-8">
+          <AdSlot slot="insideArticle" />
+        </div>
+
+        {isExpired ? (
+          <div className="rounded-lg border bg-muted p-5">
+            <p className="font-semibold">Applications Closed</p>
+            <p className="mt-2 text-sm text-muted-foreground">
+              This job page remains live for reference. Explore related active jobs below.
+            </p>
+          </div>
         ) : (
-          <>
-            <div className="prose prose-neutral max-w-none">
-              <Markdown>{job.articleContent}</Markdown>
-            </div>
-
-            <div className="my-8">
-              <AdSlot slot="insideArticle" />
-            </div>
-
-            {isExpired ? (
-              <div className="rounded-lg border bg-muted p-5">
-                <p className="font-semibold">Applications Closed</p>
-                <p className="mt-2 text-sm text-muted-foreground">
-                  This job page remains live for reference. Explore related active jobs below.
-                </p>
-              </div>
-            ) : (
-              <a
-                href={job.applyUrl}
-                className={buttonVariants({ size: "lg" })}
-                data-event="apply_click"
-                data-job-id={job.id}
-              >
-                Apply on company website
-                <ExternalLink data-icon="inline-end" aria-hidden="true" />
-              </a>
-            )}
-          </>
+          <a
+            href={job.applyUrl}
+            className={buttonVariants({ size: "lg" })}
+            data-event="apply_click"
+            data-job-id={job.id}
+          >
+            Apply on company website
+            <ExternalLink data-icon="inline-end" aria-hidden="true" />
+          </a>
         )}
 
         <script

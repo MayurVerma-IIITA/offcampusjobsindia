@@ -4,33 +4,9 @@ import { Send } from "lucide-react";
 import { getSiteSettings } from "@/lib/settings";
 import { siteConfig } from "@/lib/site";
 import { buttonVariants } from "@/components/ui/button";
-import { createClient } from "@/lib/supabase/server";
-import { getPrisma } from "@/lib/prisma";
-import { LoginButton } from "@/components/LoginButton";
-import { SignOutButton } from "@/components/SignOutButton";
 
 export async function SiteHeader() {
   const settings = await getSiteSettings();
-  let user = null;
-  try {
-    const supabase = await createClient();
-    const { data } = await supabase.auth.getUser();
-    user = data.user;
-  } catch (error) {
-    if (error && typeof error === 'object' && 'digest' in error && error.digest === 'DYNAMIC_SERVER_USAGE') {
-      throw error;
-    }
-    console.warn("Supabase auth error (likely missing env vars):", error);
-  }
-  
-  let isPremium = false;
-  if (user) {
-    const prisma = getPrisma();
-    if (prisma) {
-      const member = await prisma.member.findUnique({ where: { id: user.id } });
-      isPremium = member?.isPremium || false;
-    }
-  }
 
   return (
     <header className="sticky top-0 z-40 border-b bg-background/95 backdrop-blur">
@@ -47,15 +23,12 @@ export async function SiteHeader() {
           ))}
         </nav>
         <div className="flex items-center gap-4">
-          {user ? (
-            <div className="hidden items-center gap-2 md:flex">
-              <span className="text-sm font-medium">{user.user_metadata?.full_name || user.email?.split('@')[0]}</span>
-              {isPremium && <span className="rounded-full bg-yellow-100 px-2 py-0.5 text-xs font-semibold text-yellow-800">👑 Premium</span>}
-              <SignOutButton />
-            </div>
-          ) : (
-            <LoginButton />
-          )}
+          <Link
+            href="/premium"
+            className={buttonVariants({ size: "sm", variant: "outline" })}
+          >
+            ⭐ Premium
+          </Link>
           <a
             href={settings.telegramUrl}
             className={buttonVariants({ size: "sm" })}
