@@ -7,6 +7,7 @@ import { Card, CardContent, CardHeader, CardTitle } from "@/components/ui/card";
 import { Input } from "@/components/ui/input";
 
 export type AiDraft = {
+  isFresherEligible: boolean;
   title: string;
   company: string;
   location: string;

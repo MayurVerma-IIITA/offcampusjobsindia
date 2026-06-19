@@ -8,6 +8,7 @@ const requestSchema = z.object({
 });
 
 const generatedJobSchema = z.object({
+  isFresherEligible: z.boolean(),
   title: z.string(),
   company: z.string(),
   location: z.string(),
@@ -127,6 +128,7 @@ Before inventing new names for Category, Location, Company, or Qualification, yo
 
 The JSON shape must be:
 {
+  "isFresherEligible": boolean (You are processing jobs for a platform dedicated entirely to freshers and recent graduates from the 2024, 2025, 2026, 2027, and 2028 batches. Read the job description carefully. If the job requires 3 or more years of experience, or mentions that it requires extensive prior industry experience, you MUST set this to false. Otherwise, set it to true.),
   "title": string,
   "company": string,
   "location": string,

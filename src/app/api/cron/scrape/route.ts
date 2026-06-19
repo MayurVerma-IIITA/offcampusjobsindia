@@ -121,7 +121,17 @@ export async function GET(request: Request) {
 
       results.totalScraped += rawJobs.length;
 
+      const seniorKeywords = [
+        "senior", "sr", "sr.", "lead", "staff", "principal", "manager", 
+        "director", "vp", "head", "architect", "ii", "iii"
+      ];
+
       for (const rawJob of rawJobs) {
+        // Pre-Filter: Discard senior roles instantly based on title
+        if (seniorKeywords.some(kw => rawJob.title.toLowerCase().split(/[^a-z]/).includes(kw))) {
+          continue;
+        }
+
         // Deduplication Check
         const existing = await prisma.job.findFirst({
           where: { applyUrl: rawJob.applyUrl },
@@ -139,6 +149,11 @@ export async function GET(request: Request) {
           if (!aiDraft) {
             results.errors++;
             continue;
+          }
+
+          // Post-Filter: Check if Gemini flagged this as requiring too much experience
+          if (aiDraft.isFresherEligible === false) {
+             continue; // Discard!
           }
 
           const articleContent = formatAiDraftToMarkdown(aiDraft as AiDraft);
